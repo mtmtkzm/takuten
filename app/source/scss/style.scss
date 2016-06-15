@@ -6,36 +6,29 @@
 
 /* 以下にスタイルを記述
 ************************* */
-body {
-	background-color: #EBEFF3;
-}
 
 #banner {
 	.symbols {
-		// width: 100vw;
-		// height: 100vh;
-		width: 1280px;
-		height: 680px;
-
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-50%);
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		z-index: -1;
 
 		img {
 			position: absolute;
-			&.symbol_01 { top: 40px; left: 40px; }
-			&.symbol_02 { top: 40px; left: 240px; }
-			&.symbol_03 { top: 240px; left: 40px; }
-			&.symbol_04 { top: 260px; left: 240px; }
-			&.symbol_05 { bottom: 40px; left: 40px; }
-			&.symbol_06 { bottom: 40px; left: 300px; }
-			&.symbol_07 { bottom: 40px; right: 400px; }
-			&.symbol_08 { bottom: 40px; right: 40px; }
-			&.symbol_09 { bottom: 210px; right: 40px; }
-			&.symbol_10 { bottom: 210px; right: 240px; }
-			&.symbol_11 { top: 120px; right: 40px; }
-			&.symbol_12 { top: 40px; right: 100px; }
+			&.symbol_01 { top: 6vw; left:4vw; width: 15.083vw; }
+			&.symbol_02 { top: 6vw; left:22vw; width: 18.5vw; }
+			&.symbol_03 { top: 23vw; left:4vw; width: 16.666vw; }
+			&.symbol_04 { top: 22vw; left:23vw; width: 12.75vw; }
+			&.symbol_05 { top: 40vw; left:4vw; width: 20.083vw; }
+			&.symbol_06 { top: 40vw; left:28vw; width: 26.75vw; }
+			&.symbol_07 { top: 40vw; right:28vw; width: 12.833vw; }
+			&.symbol_08 { top: 40vw; right: 4vw; width: 22.75vw; }
+			&.symbol_09 { top: 18vw; right:4vw; width: 12vw; }
+			&.symbol_10 { top: 20vw; right:20vw; width: 11.916vw; }
+			&.symbol_11 { top: 7vw; right:4vw; width: 27.75vw; }
+			&.symbol_12 { top: 3vw; right:10vw; width: 25.916vw; }
 		}
 	}
 
