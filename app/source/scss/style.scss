@@ -7,9 +7,15 @@
 /* 以下にスタイルを記述
 ************************* */
 
-#banner {
-	.symbols {
+body {
+	background-color: #EBEFF3;
+}
 
+
+#banner {
+	height: 53.125vw;
+
+	.symbols {		
 		img {
 			position: absolute;
 			&.symbol_01 { top: 3vw; left: 3vw; width: 15.083vw; }
@@ -28,6 +34,29 @@
 	}
 
 	.title {
+		width: 34.218vw;
+		height: 34.218vw;
+		display: block;
+		background-color: #fff;
 
+		border-radius: 50%;
+		position: absolute;
+		top: 4vw;
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			width: 20.625vw;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
 	}
+}
+
+#about,
+#map,
+#detail,
+#access {
+	height: 100vh;
 }
