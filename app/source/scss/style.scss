@@ -18,6 +18,7 @@ body {
 	.symbols {
 		img {
 			position: absolute;
+			display: none;
 			&.symbol_01 { top: 3vw; left: 3vw; width: 15.083vw; }
 			&.symbol_02 { top: 3vw; left: 19.5vw; width: 18.5vw; }
 			&.symbol_03 { top: 21vw; left: 3vw; width: 16.666vw; }
