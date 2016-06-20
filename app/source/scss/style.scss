@@ -3,6 +3,7 @@
 @import 'mixin';
 @import 'base';
 @import 'clearfix';
+@import 'intro';
 
 /* 以下にスタイルを記述
 ************************* */
@@ -61,8 +62,35 @@ $sidebar: 330px;
 #main {
 	width: calc(100% - #{$sidebar});
 	float: right;
+	.main-inner {
+		width: 870px;
+		margin: 0 auto;
+	}
 }
 
+.intro {
+	.intro-detail {
+		position: relative;
+		.p-text,
+		.p-logo,
+		.p-img1,
+		.p-img2,
+		.p-img3 {
+			position: absolute; // fix
+		}
+		.intro-text {
+			h3 {
+				font-size: 32px;
+				font-weight: bold;
+				margin-bottom: .8em;
+			}
+			p {
+				font-size: 16px;
+				line-height: 2em;
+			}
+		}
+	}
+}
 
 
 #sidebar {
@@ -78,7 +106,6 @@ $sidebar: 330px;
 
 .about,
 .map,
-.detail,
 .access {
 	height: 50vh;
 }
