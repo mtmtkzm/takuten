@@ -11,7 +11,6 @@ body {
 	background-color: #eff2f5;
 }
 
-
 #banner {
 	height: 53.125vw;
 
@@ -54,14 +53,32 @@ body {
 				// ここの値を調整してください
 				width: 110%;
 			}
-			
 		}
 	}
 }
 
-#about,
-#map,
-#detail,
-#access {
-	height: 100vh;
+$sidebar: 330px;
+#main {
+	width: calc(100% - #{$sidebar});
+	float: right;
+}
+
+
+
+#sidebar {
+	width: 330px;
+	position: absolute;
+	.sidebar-menu {
+		text-align: center;
+		line-height: 2em;
+	}
+}
+
+
+
+.about,
+.map,
+.detail,
+.access {
+	height: 50vh;
 }

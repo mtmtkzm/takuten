@@ -3,7 +3,7 @@
 <head>
 	<% include _head %>
 </head>
-<body>
+<body class="clearfix">
 	<section id="banner">
 		<div class="symbols">
 			<img src="./images/top/01.png" alt="" class="js-randomFade symbol_01">
@@ -24,18 +24,35 @@
 			<img class="dots" src="./images/top/dots.png" alt="">
 		</div>
 	</section>
-	<section id="about">
-		<h2>卓展とは</h2>
-	</section>
-	<section id="map">
-		<h2>map</h2>
-	</section>
-	<section id="detail">
-		<h2>detail</h2>
-	</section>
-	<section id="access">
-		<h2>access</h2>
-	</section>
+	<main id="main">
+		<section class="about">
+			<h2>卓展とは</h2>
+		</section>
+		<section class="map">
+			<h2>map</h2>
+		</section>
+		<section class="detail">
+			<h2>detail</h2>
+			<section class="branco">
+				<img src="" alt="">
+			</section>
+		</section>
+		<section class="access">
+			<h2>access</h2>
+		</section>		
+	</main>
+	<aside id="sidebar">
+		<nav>
+			<h1><img src="./images/common/menu.png" alt=""></h1>
+			<ul class="sidebar-menu">
+				<li>卓展とは</li>
+				<li>会場マップ</li>
+				<li>卓の紹介</li>
+				<li>アクセス</li>
+			</ul>
+		</nav>
+	</aside>
 	<% include _script %>
+	<div class="box"></div>
 </body>
 </html>
