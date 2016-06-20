@@ -18,18 +18,18 @@ body {
 		img {
 			position: absolute;
 			display: none;
-			&.symbol_01 { top: 3vw; left: 3vw; width: 15.083vw; }
-			&.symbol_02 { top: 3vw; left: 19.5vw; width: 18.5vw; }
-			&.symbol_03 { top: 21vw; left: 3vw; width: 16.666vw; }
-			&.symbol_04 { top: 18vw; left: 18.5vw; width: 12.75vw; }
+			&.symbol_01 { top: 3vw; left: 3vw; width: 14.9vw; }
+			&.symbol_02 { top: 3vw; left: 19.5vw; width: 18vw; }
+			&.symbol_03 { top: 21.5vw; left: 3vw; width: 16.4vw; }
+			&.symbol_04 { top: 18vw; left: 18.5vw; width: 12.35vw; }
 			&.symbol_05 { top: 37.5vw; left: 3vw; width: 20.083vw; }
 			&.symbol_06 { top: 40.5vw; left: 27.5vw; width: 26.75vw; }
 			&.symbol_07 { top: 40.5vw; right: 29vw; width: 12.833vw; }
 			&.symbol_08 { top: 40.5vw; right: 3vw; width: 22.75vw; }
 			&.symbol_09 { top: 19.5vw; right: 3vw; width: 12vw; }
 			&.symbol_10 { top: 21vw; right: 19vw; width: 11.916vw; }
-			&.symbol_11 { top: 7.5vw; right: 3vw; width: 27.75vw; }
-			&.symbol_12 { top: 3vw; right: 9.5vw; width: 25.916vw; }
+			&.symbol_11 { top: 7.5vw; right: 3vw; width: 27.2vw; }
+			&.symbol_12 { top: 3vw; right: 9.5vw; width: 25.48vw; }
 		}
 	}
 
@@ -51,7 +51,7 @@ body {
 			}
 			&.dots {
 				// ここの値を調整してください
-				width: 110%;
+				width: 108%;
 			}
 		}
 	}
