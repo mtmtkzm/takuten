@@ -35,12 +35,9 @@ body {
 	}
 
 	.title {
-		width: 34.218vw;
-		height: 34.218vw;
-		display: block;
-		background-color: #fff;
-
-		border-radius: 50%;
+		$area: 34.218vw;
+		width: $area;
+		height: $area;
 		position: absolute;
 		top: 4vw;
 		left: 50%;
@@ -51,11 +48,11 @@ body {
 			left: 50%;
 			transform: translate(-50%, -50%);
 			&.takuten {
-				width: 20.625vw;				
+				width: 100%;
 			}
 			&.dots {
 				// ここの値を調整してください
-				width: 36.9vw;
+				width: 110%;
 			}
 			
 		}
