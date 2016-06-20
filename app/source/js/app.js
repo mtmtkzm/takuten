@@ -33,3 +33,8 @@ function randomFadeIn(num) {
 for(var i=random(); i!=null; i=random()) {
     randomFadeIn(i);
 }
+
+
+/*  Parallax Scroll
+******************** */
+$('.js-parallax').enllax();
