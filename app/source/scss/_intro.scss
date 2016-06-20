@@ -1,0 +1,67 @@
+#branco {
+    height: 1200px;
+    .p-text {
+        top: 400px;
+        left: 0;
+        z-index: 0;
+        width: 500px;
+    }
+    
+    .p-logo {
+        top: 250px;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .p-img1 {
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    
+    .p-img2 {
+        top: 500px;
+        right: 0;
+        z-index: 0;
+    }
+    
+    .p-img3 {
+        top: 700px;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+#brica {
+    height: 1000px;
+    .p-text {
+        top: 380px;
+        left: 0;
+        z-index: 0;
+        width: 500px;
+    }
+    
+    .p-logo {
+        top: 280px;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .p-img1 {
+        top: 0px;
+        left: 0;
+        z-index: 0;
+    }
+    
+    .p-img2 {
+        top: 400px;
+        right: 0;
+        z-index: 0;
+    }
+    
+    .p-img3 {
+        top: 600px;
+        left: 0;
+        z-index: 0;
+    }
+}
