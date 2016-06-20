@@ -46,11 +46,18 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		img {
-			width: 20.625vw;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			&.takuten {
+				width: 20.625vw;				
+			}
+			&.dots {
+				// ここの値を調整してください
+				width: 36.9vw;
+			}
+			
 		}
 	}
 }
