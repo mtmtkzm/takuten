@@ -16,6 +16,7 @@ body {
 	height: 53.125vw;
 
 	.symbols {
+		min-width: 1100px;
 		img {
 			position: absolute;
 			display: none;
@@ -51,7 +52,6 @@ body {
 				width: 100%;
 			}
 			&.dots {
-				// ここの値を調整してください
 				width: 108%;
 			}
 		}
@@ -76,7 +76,16 @@ $sidebar: 330px;
 		.p-img1,
 		.p-img2,
 		.p-img3 {
-			position: absolute; // fix
+			position: absolute;
+			&.b:before {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: 10;
+				width: 870px;
+				height: 1000px;
+				background: url('../images/detail/bg/b.png') repeat 0 0;
+			}
 		}
 		.intro-text {
 			h3 {
