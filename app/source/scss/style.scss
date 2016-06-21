@@ -47,12 +47,22 @@ body {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			transform-origin: 0% 0%;
 			transform: translate(-50%, -50%);
 			&.takuten {
 				width: 100%;
 			}
 			&.dots {
 				width: 108%;
+				animation: rotation 50s linear infinite;
+			}
+			@keyframes rotation {
+				from {
+					transform: rotate(0deg) translate(-50%, -50%);
+				}
+				to {
+					transform: rotate(360deg) translate(-50%, -50%);
+				}
 			}
 		}
 	}
