@@ -1,5 +1,11 @@
 #branco {
     height: 1200px;
+    &:before {
+        content: url('../images/detail/branco/en.png');
+        position: relative;
+        top: 40%;
+        left: -300px;
+    }
     .p-text {
         top: 400px;
         left: 0;
