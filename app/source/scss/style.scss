@@ -78,6 +78,14 @@ $sidebar: 330px;
 	}
 }
 
+.about,
+.map,
+.access {
+	height: 50vh;
+	background-color: #ddd;
+	margin: 30px 0;
+}
+
 .intro {
 	.intro-detail {
 		position: relative;
@@ -132,6 +140,7 @@ $sidebar: 330px;
 	.sidebar-menu {
 		text-align: center;
 		line-height: 2em;
+		margin-top: 100px;
 	}
 	&.fixed {
 		position: fixed;
@@ -143,10 +152,8 @@ $sidebar: 330px;
 	}
 }
 
-
-
-.about,
-.map,
-.access {
-	height: 50vh;
+#footer {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
 }
