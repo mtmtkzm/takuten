@@ -125,10 +125,21 @@ $sidebar: 330px;
 
 #sidebar {
 	width: 330px;
+	padding-left: 20px;
+	padding-top: 20px;
 	position: absolute;
+	box-sizing: border-box;
 	.sidebar-menu {
 		text-align: center;
 		line-height: 2em;
+	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	&.static {
+		position: static;
 	}
 }
 

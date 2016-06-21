@@ -1,5 +1,5 @@
 /*  randomFade
-******************** */
+************************* */
 var $target = $('.js-randomFade'); // FadeInさせる要素
 var interval = 150; // 150ms感覚でFadeInする
 var length = $target.length;
@@ -36,5 +36,21 @@ for(var i=random(); i!=null; i=random()) {
 
 
 /*  Parallax Scroll
-******************** */
+************************* */
 $('.js-parallax').enllax();
+
+
+/*  Change Nav-status
+************************* */
+var $jsNav = $('.js-nav');
+var os = $jsNav.offset().top;
+$(window).scroll(function() {
+    var st = $(window).scrollTop();
+    if (st > os) {
+        $jsNav.addClass('fixed');
+        $jsNav.removeClass('static');
+    } else {
+        $jsNav.addClass('static');
+        $jsNav.removeClass('fixed');
+    }
+});
