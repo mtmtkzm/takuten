@@ -1,5 +1,5 @@
 /*  randomFade
-************************* */
+ ************************* */
 var $target = $('.js-randomFade'); // FadeInさせる要素
 var interval = 150; // 150ms感覚でFadeInする
 var length = $target.length;
@@ -8,7 +8,7 @@ var count = 0;
 
 function randomNumber(n) {
     var i, j, tmp, a = new Array(n);
-    return function (){
+    return function() {
         if (n > 0) {
             i = n - 1;
             j = Math.floor(Math.random() * (n));
@@ -30,18 +30,18 @@ function randomFadeIn(num) {
         $target.eq(num).fadeIn(500);
     }, interval * count);
 }
-for(var i=random(); i!=null; i=random()) {
+for (var i = random(); i != null; i = random()) {
     randomFadeIn(i);
 }
 
 
 /*  Parallax Scroll
-************************* */
+ ************************* */
 $('.js-parallax').enllax();
 
 
 /*  Change Nav-status
-************************* */
+ ************************* */
 var $jsNav = $('.js-nav');
 var os = $jsNav.offset().top;
 $(window).scroll(function() {
@@ -56,7 +56,7 @@ $(window).scroll(function() {
 });
 
 /*  Change menu Progress
-************************* */
+ ************************* */
 var $jsDots = $('.js-progress-dots circle');
 var $jsProgress = $('.js-progress');
 var changePoint = [$jsProgress.length]; // 各要素の高さ
@@ -68,7 +68,7 @@ $jsProgress.each(function(i, el) {
 
 $(window).scroll(function() {
     var st = $(window).scrollTop();
-    for (var i=0; i<changePoint.length; i++) {
+    for (var i = 0; i < changePoint.length; i++) {
         if (changePoint[i] < st) {
             $jsDots.eq(i).addClass('visible');
         } else {
@@ -76,3 +76,16 @@ $(window).scroll(function() {
         }
     }
 });
+
+/*  Google Maps API
+ ************************* */
+function initialize() {
+    var latlng = new google.maps.LatLng(35.181691, 136.947799);
+    var myOptions = {
+        zoom: 16, // 拡大比率
+        center: latlng, // 表示枠内の中心点
+        mapTypeId: google.maps.MapTypeId.ROADMAP, // 表示タイプの指定
+        scrollwheel: false // スクロールの制限
+    };
+    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+}

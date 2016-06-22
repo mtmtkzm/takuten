@@ -3,7 +3,7 @@
 <head>
 	<% include _head %>
 </head>
-<body class="clearfix">
+<body class="clearfix" onload="initialize();">
 	<section id="banner">
 		<div class="symbols">
 			<img src="./images/top/01.png" alt="" class="js-randomFade symbol_01">
@@ -115,6 +115,7 @@
 			</section>
 			<section class="access js-progress" id="access">
 				<h2><img src="./images/access/h2.png" alt="アクセス"></h2>
+				<div id="map_canvas" class="google-map" style="width:100%; height:350px;"></div>
 				<p>バスのご利用をおすすめします</p>
 				<img src="./images/access/bus_detail.png" alt="バスを使ってくる場合">
 			</section>
