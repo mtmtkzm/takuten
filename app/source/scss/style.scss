@@ -147,11 +147,23 @@ $sidebar: 330px;
 
 #sidebar {
 	width: 330px;
-	padding-left: 20px;
-	padding-top: 20px;
 	position: absolute;
+	padding-top: 10px;
+	padding-left: 10px;
 	box-sizing: border-box;
-	.sidebar-menu {
+	.progress {
+		position: relative;
+		.progress-title {
+			padding-top: 20px;
+			padding-left: 20px;
+		}
+		.progress-dots {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	.gnav {
 		text-align: center;
 		line-height: 2em;
 		margin-top: 100px;

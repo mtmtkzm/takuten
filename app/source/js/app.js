@@ -54,3 +54,26 @@ $(window).scroll(function() {
         $jsNav.removeClass('fixed');
     }
 });
+
+/*  Change menu Progress
+************************* */
+var $jsDots = $('.js-progress-dots circle');
+var $jsProgress = $('.js-progress');
+var changePoint = [$jsProgress.length]; // 各要素の高さ
+
+$jsProgress.each(function(i, el) {
+    var ot = $(el).offset().top;
+    changePoint[i] = ot;
+});
+
+$(window).scroll(function() {
+    var st = $(window).scrollTop();
+    for (var i=0; i<changePoint.length; i++) {
+        if (changePoint[i] < st) {
+            // 濃く塗る
+            $jsDots.eq(i).css('fill', '#053077');
+        } else {
+            $jsDots.eq(i).css('fill', '#e1e6e6');
+        }
+    }
+});
