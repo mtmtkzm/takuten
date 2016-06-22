@@ -70,10 +70,9 @@ $(window).scroll(function() {
     var st = $(window).scrollTop();
     for (var i=0; i<changePoint.length; i++) {
         if (changePoint[i] < st) {
-            // 濃く塗る
-            $jsDots.eq(i).css('fill', '#053077');
+            $jsDots.eq(i).addClass('visible');
         } else {
-            $jsDots.eq(i).css('fill', '#e1e6e6');
+            $jsDots.eq(i).removeClass('visible');
         }
     }
 });

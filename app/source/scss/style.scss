@@ -161,6 +161,14 @@ $sidebar: 330px;
 			position: absolute;
 			top: 0;
 			left: 0;
+			circle {
+				fill: #e1e6e6;
+				r: 4.5;
+				transition: fill .3s ease;
+				&.visible {
+					fill: #053077;
+				}
+			}
 		}
 	}
 	.gnav {
