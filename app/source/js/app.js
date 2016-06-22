@@ -70,9 +70,13 @@ $(window).scroll(function() {
     var st = $(window).scrollTop();
     for (var i = 0; i < changePoint.length; i++) {
         if (changePoint[i] < st) {
+            $jsDots.eq(i).removeClass('now');
             $jsDots.eq(i).addClass('visible');
+            if (st < changePoint[i+1]) {
+                $jsDots.eq(i).addClass('now');
+            }
         } else {
-            $jsDots.eq(i).removeClass('visible');
+            $jsDots.eq(i).removeClass('visible now');
         }
     }
 });
@@ -87,5 +91,6 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP, // 表示タイプの指定
         scrollwheel: false // スクロールの制限
     };
+
     var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
 }

@@ -163,6 +163,9 @@ $sidebar: 330px;
 				&.visible {
 					fill: #053077;
 				}
+				&.now {
+					r: 8;
+				}
 			}
 		}
 	}
