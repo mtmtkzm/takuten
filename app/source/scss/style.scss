@@ -89,6 +89,11 @@ $sidebar: 330px;
 		margin: 30px 0;
 		line-height: 2.1em;
 	}
+	table {
+		td {
+			padding: 7px 0;
+		}
+	}
 }
 
 .intro {
@@ -139,6 +144,17 @@ $sidebar: 330px;
 	}
 }
 
+.access {
+	padding-bottom: 100px;
+	.bus-recommend {
+		margin: 0 0 12px 0;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			padding: 3px 0 0 5px;
+		}
+	}
+}
 
 #sidebar {
 	width: 330px;
@@ -188,4 +204,7 @@ $sidebar: 330px;
 	width: 100%;
 	overflow: hidden;
 	text-align: center;
+	clear: both;
+	height: 300px;
+	background: $blue;
 }
