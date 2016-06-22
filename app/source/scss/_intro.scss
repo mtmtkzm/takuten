@@ -1,5 +1,19 @@
+#intro {
+    .p-text {
+        left: 0;
+        width: 480px;
+        z-index: 1;
+    }
+    .p-logo {
+        z-index: 1;
+    }
+    .p-img1,.p-img2,.p-img3 {
+        z-index: 0;
+    }
+}
+
 #branco {
-    height: 1200px;
+    height: 1110px;
     &:before {
         content: url('../images/detail/branco/en.png');
         position: relative;
@@ -8,66 +22,195 @@
     }
     .p-text {
         top: 400px;
-        left: 0;
-        z-index: 1;
-        width: 500px;
     }
-    
     .p-logo {
         top: 250px;
         right: 0;
-        z-index: 1;
     }
-    
     .p-img1 {
         top: 0;
         left: 0;
-        z-index: 0;
     }
-    
     .p-img2 {
         top: 500px;
         right: 0;
-        z-index: 0;
     }
-    
     .p-img3 {
-        top: 700px;
+        top: 720px;
         left: 0;
-        z-index: 0;
     }
 }
 
 #brica {
-    height: 1000px;
+    height: 1220px;
+    &:before {
+        content: url('../images/detail/brica/en.png');
+        position: relative;
+        top: 50%;
+        left: -300px;
+    }
     .p-text {
-        top: 380px;
-        left: 0;
-        z-index: 1;
-        width: 500px;
+        top: 420px;
     }
-    
     .p-logo {
-        top: 280px;
-        right: 0;
-        z-index: 1;
+        top: 295px;
+        left: 0;
     }
-    
     .p-img1 {
-        top: 0px;
-        left: 0;
-        z-index: 0;
-    }
-    
-    .p-img2 {
-        top: 400px;
+        top: 0;
         right: 0;
-        z-index: 0;
     }
-    
+    .p-img2 {
+        top: 460px;
+        right: 0;
+    }
     .p-img3 {
-        top: 600px;
+        top: 790px;
         left: 0;
-        z-index: 0;
+    }
+}
+
+#san65 {
+    height: 1210px;
+    &:before {
+        content: url('../images/detail/365/en.png');
+        position: relative;
+        top: 45%;
+        left: -300px;
+    }
+    .p-text {
+        top: 440px;
+    }
+    .p-logo {
+        top: 160px;
+        right: 0;
+    }
+    .p-img1 {
+        top: 0;
+        left: 0;
+    }
+    .p-img2 {
+        top: 480px;
+        right: 0;
+    }
+    .p-img3 {
+        top: 785px;
+        left: 0;
+    }
+}
+
+#gafe {
+    height: 1235px;
+    &:before {
+        content: url('../images/detail/gafe/en.png');
+        position: relative;
+        top: 50%;
+        left: -300px;
+    }
+    .p-text {
+        top: 495px;
+    }
+    .p-logo {
+        top: 200px;
+        left: 0;
+    }
+    .p-img1 {
+        top: 0;
+        right: 0;
+    }
+    .p-img2 {
+        top: 510px;
+        right: 0;
+    }
+    .p-img3 {
+        top: 795px;
+        left: 0;
+    }
+}
+
+#doodle {
+    height: 1220px;
+    &:before {
+        content: url('../images/detail/doodle/en.png');
+        position: relative;
+        top: 45%;
+        left: -300px;
+    }
+    .p-text {
+        top: 430px;
+    }
+    .p-logo {
+        top: 250px;
+        right: 0;
+    }
+    .p-img1 {
+        top: 0;
+        left: 0;
+    }
+    .p-img2 {
+        top: 470px;
+        right: 0;
+    }
+    .p-img3 {
+        top: 750px;
+        left: 0;
+    }
+}
+
+#careco {
+    height: 1230px;
+    &:before {
+        content: url('../images/detail/careco/en.png');
+        position: relative;
+        top: 50%;
+        left: -300px;
+    }
+    .p-text {
+        top: 470px;
+    }
+    .p-logo {
+        top: 190px;
+        right: 0;
+    }
+    .p-img1 {
+        top: 0;
+        left: 0;
+    }
+    .p-img2 {
+        top: 520px;
+        right: 0;
+    }
+    .p-img3 {
+        top: 795px;
+        left: 0;
+    }
+}
+
+#irodori {
+    height: 1220px;
+    &:before {
+        content: url('../images/detail/irodori/en.png');
+        position: relative;
+        top: 50%;
+        left: -300px;
+    }
+    .p-text {
+        top: 470px;
+    }
+    .p-logo {
+        top: 370px;
+        right: 0;
+    }
+    .p-img1 {
+        top: 0;
+        left: 0;
+    }
+    .p-img2 {
+        top: 500px;
+        right: 0;
+    }
+    .p-img3 {
+        top: 790px;
+        left: 0;
     }
 }
