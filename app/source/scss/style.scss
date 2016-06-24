@@ -11,6 +11,7 @@
 body {
 	background-color: #eff2f5;
 	letter-spacing: 1px;
+	font-weight: bold;
 }
 
 #banner {
@@ -73,7 +74,6 @@ $sidebar: 330px;
 #main {
 	width: calc(100% - #{$sidebar});
 	float: right;
-	font-weight: bold;
 	.main-inner {
 		width: 870px;
 		margin: 0 auto;
@@ -112,7 +112,7 @@ $sidebar: 330px;
 				left: 20px;
 				bottom: 270px;
 				z-index: -1;
-				width: 100%;
+				width: 92%;
 				height: 290px;
 				background: repeat 0 0;
 			}
@@ -126,15 +126,19 @@ $sidebar: 330px;
 				background-image: url('../images/detail/bg/s.png');
 			}
 			&.mini::after {
-				height: 250px;
-				bottom: 230px;
+				height: 230px;
+				bottom: 200px;
+			}
+			img {
+				width: 92%;
+				height: auto;
 			}
 		}
 		.intro-text {
 			h3 {
 				font-size: 30px;
 				margin: .8em 0 .8em 0;
-				text-shadow: 3px 4px 0 rgba(255,255,255,1);
+				text-shadow: 4px 4px 0 rgba(255,255,255,1);
 				line-height: 1.1em;
 			}
 			p {
@@ -186,9 +190,20 @@ $sidebar: 330px;
 		}
 	}
 	.gnav {
-		text-align: center;
-		line-height: 2em;
-		margin-top: 100px;
+		font-size: 13px;
+		letter-spacing: 1.9px;
+		margin: 120px 0 0 65px;
+		li {
+			width: 90px;
+			margin: 28px 0;
+			text-align: center;
+		}
+		a {
+			padding-bottom: 2px;
+			color: $blue;
+			text-decoration: none;
+			text-shadow: 2.5px 2.5px 0 rgba(255,255,255,1);
+		}
 	}
 	&.fixed {
 		position: fixed;
