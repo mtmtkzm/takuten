@@ -169,11 +169,14 @@ $sidebar: 330px;
 	.progress {
 		position: relative;
 		.progress-title {
+			position: relative;
 			padding-top: 20px;
 			padding-left: 20px;
+			z-index: 1;
 		}
 		.progress-dots {
 			position: absolute;
+			z-index: 0;
 			top: 0;
 			left: 0;
 			circle {
@@ -220,6 +223,5 @@ $sidebar: 330px;
 	overflow: hidden;
 	text-align: center;
 	clear: both;
-	height: 300px;
 	background: $blue;
 }
