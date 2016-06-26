@@ -124,10 +124,6 @@ $sidebar: 330px;
 .map {
 	margin: 50px 0 0;
 }
-.about,
-.map,
-.access {
-}
 
 .intro {
 	.intro-detail {
@@ -222,12 +218,17 @@ $sidebar: 330px;
 			circle {
 				fill: #e1e6e6;
 				r: 4.5;
-				transition: fill .3s ease;
+				transition: .3s ease;
+				transition-property: fill, r;
 				&.visible {
 					fill: #053077;
 				}
 				&.now {
 					r: 7;
+				}
+				&:hover {
+					r: 7;
+					fill: #053077;
 				}
 			}
 		}
