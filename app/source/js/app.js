@@ -1,4 +1,4 @@
-/*  randomFade & Order
+/*  randomFade
  ************************* */
 var $f_target = $('.js-randomFade'); // FadeInさせる要素
 var $o_target = $('.js-randomOrder'); // FadeInさせる要素
@@ -6,6 +6,7 @@ var $o_target = $('.js-randomOrder'); // FadeInさせる要素
 var interval = 150; // 150ms感覚でFadeInする
 var length = $f_target.length;
 var count = 0;
+
 function randomNumber(n) {
     var i, j, tmp, a = new Array(n);
     return function() {
@@ -25,22 +26,62 @@ function randomNumber(n) {
 
 // ランダムフェードイン
 var random = randomNumber(length);
+
 function randomFadeIn(num) {
     count++;
     setTimeout(function() {
         $f_target.eq(num).fadeIn(500);
     }, interval * count);
 }
-// ランダム並び替え
-function randomOrder (num) {
-    console.log('Your order: ', i);
-}
-
-// 各々実行
 for (var i = random(); i != null; i = random()) {
     randomFadeIn(i);
-    randomOrder(i);
 }
+
+
+/*  randomOrder
+ ************************* */
+var originArray = []; // 初期表示順
+
+// 各要素を取得
+var list = document.querySelector('.js-randomList');
+var listItem = document.querySelectorAll('.js-randomListItem');
+var progressAnchor = document.querySelectorAll('.js-progressAnchor');
+
+listItem.forEach(function(v, i, a) {
+    originArray.push(v.outerHTML);
+});
+
+// 配列を並び替える
+function shuffle(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var r = Math.floor(Math.random() * (i + 1));
+        var tmp = array[i];
+        array[i] = array[r];
+        array[r] = tmp;
+    }
+    return array;
+}
+var randomArray = shuffle(originArray);
+
+
+
+
+
+// Array.prototype.forEach.call(progressAnchor, function(node) {
+//     console.log(node);
+// });
+
+
+// 元の表示をクリア（削除）
+Array.prototype.forEach.call(listItem, function(node) {
+    list.removeChild(node);
+});
+
+// ランダムで並び替えたものを、入れ直す
+for (var i = 0; i < randomArray.length; i++) {
+    list.insertAdjacentHTML('beforeend', randomArray[i]);
+}
+
 
 
 /*  Parallax Scroll
