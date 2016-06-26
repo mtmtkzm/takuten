@@ -76,14 +76,14 @@ for (var i = 0; i < randomArray.length; i++) {
     list.insertAdjacentHTML('beforeend', randomArray[i]);
 }
 
+/*  Attach href Attr
+ ************************* */
 function attachHref() {
-    progressAnchor.forEach(function(v,i,a) {
-        console.log(i+1, document.querySelectorAll('.js-progress')[i].id);
+    progressAnchor.forEach(function(v, i, a) {
         a[i].setAttribute('href', '#' + document.querySelectorAll('.js-progress')[i].id);
     });
 }
 attachHref();
-
 
 
 /*  Parallax Scroll
@@ -134,18 +134,43 @@ $(window).on('scroll load', function() {
 
 /*  Google Maps API
  ************************* */
+
+
 function initialize() {
-    var latlng = new google.maps.LatLng(35.181691, 136.947799);
-    var myOptions = {
-        zoom: 16, // 拡大比率
-        center: latlng, // 表示枠内の中心点
-        mapTypeId: google.maps.MapTypeId.ROADMAP, // 表示タイプの指定
-        scrollwheel: false // スクロールの制限
+    var LatLng = new google.maps.LatLng(35.181691, 136.947799);
+    var MY_MAPTYPE_ID = '卓展2016 会場';
+    var featureOptions = [{
+        'stylers': [{
+            'hue': '#EFF2F5'
+        }],
+        'elementType': 'all',
+        'featureType': 'all'
+    }];
+    var mapOptions = {
+        zoom: 15,
+        center: LatLng,
+        mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+        },
+        scrollwheel: false, // スクロールの制限
+        mapTypeId: MY_MAPTYPE_ID
     };
-    // var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    var marker = new google.maps.Marker({
+        icon: new google.maps.MarkerImage(
+            './images/map/gm_icon.png', //画像ファイルのパス
+            new google.maps.Size(50, 80), //アイコンの表示サイズ(縦,横)
+            new google.maps.Point(0, 0)
+        ),
+        position: LatLng,
+        map: map
+    });
+    var styledMapOptions = {
+        name: '卓展2016 会場'
+    };
+    var customMapType = new google.maps.StyledMapType(featureOptions, styledMapOptions);
+    map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 }
-
-
 
 /*  Smooth Scroll
  ************************* */
