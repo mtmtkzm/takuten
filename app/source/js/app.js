@@ -51,36 +51,38 @@ listItem.forEach(function(v, i, a) {
     originArray.push(v.outerHTML);
 });
 
+var randomNum = [];
 // 配列を並び替える
 function shuffle(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var r = Math.floor(Math.random() * (i + 1));
-        var tmp = array[i];
+        // 配列
+        var arrayTemp = array[i];
         array[i] = array[r];
-        array[r] = tmp;
+        array[r] = arrayTemp;
+        randomNum.push(r);
     }
     return array;
 }
 var randomArray = shuffle(originArray);
-
-
-
-
-
-// Array.prototype.forEach.call(progressAnchor, function(node) {
-//     console.log(node);
-// });
-
 
 // 元の表示をクリア（削除）
 Array.prototype.forEach.call(listItem, function(node) {
     list.removeChild(node);
 });
 
-// ランダムで並び替えたものを、入れ直す
+// ランダムで並び替えたものを、入れ直し
 for (var i = 0; i < randomArray.length; i++) {
     list.insertAdjacentHTML('beforeend', randomArray[i]);
 }
+
+function attachHref() {
+    progressAnchor.forEach(function(v,i,a) {
+        console.log(i+1, document.querySelectorAll('.js-progress')[i].id);
+        a[i].setAttribute('href', '#' + document.querySelectorAll('.js-progress')[i].id);
+    });
+}
+attachHref();
 
 
 
@@ -140,7 +142,6 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.ROADMAP, // 表示タイプの指定
         scrollwheel: false // スクロールの制限
     };
-
     // var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
 }
 
@@ -150,7 +151,7 @@ function initialize() {
  ************************* */
 $('a[href^="#"]').on('click', function() {
     var speed = 400;
-    var offsetY = 30;
+    var offsetY = -1;
     var href = $(this).attr('href');
     var target = $(href == '#' || href == '' ? 'html' : href);
     var position = target.offset().top;
