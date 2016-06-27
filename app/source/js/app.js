@@ -37,6 +37,29 @@ for (var i = random(); i != null; i = random()) {
     randomFadeIn(i);
 }
 
+/*  title Animation
+ ************************* */
+var mvTitle = $('.js-title');
+var defaultWidth = mvTitle.width();
+
+function titleAnimate() {
+    mvTitle.animate({
+        width: defaultWidth * 1.02,
+        opacity: 1
+    }, 700, function() {
+        $(this).animate({
+            width: defaultWidth
+        }, 300);
+    });
+}
+
+function titleReady() {
+    mvTitle.css('width', defaultWidth * 0.7);
+    titleAnimate();
+}
+
+titleReady();
+
 
 /*  randomOrder
  ************************* */
@@ -79,7 +102,7 @@ for (var i = 0; i < randomArray.length; i++) {
 function attachHref() {
     progressAnchor.each(function(i, elm) {
         var id = $('.js-progress').eq(i).attr('id');
-        $(elm).attr('href', '#'+id);
+        $(elm).attr('href', '#' + id);
     });
 }
 attachHref();
@@ -87,15 +110,13 @@ attachHref();
 
 /*  Parallax Scroll
  ************************* */
-
-$(window).on('resize load', function(){
-    var w = $(window).width();
-    if(w < 1280) {
-        $('.js-parallax-sp').enllax();
-    } else {
+$(window).on('load resize', function() {
+    var ww = $(window).width();
+    if(ww >= 1280) {
         $('.js-parallax').enllax();
     }
 });
+
 
 /*  Scroll Fadein
  ************************* */
@@ -104,7 +125,7 @@ $(window).on('scroll load', function() {
     var scrollTop = $(window).scrollTop();
     scrollFadein.each(function(i, elm) {
         var targetPos = $(this).offset().top;
-        if(scrollTop > targetPos - $(window).height() + 200) {
+        if (scrollTop > targetPos - $(window).height() + 200) {
             $(this).animate({ opacity: 1 }, 500);
         }
     });
