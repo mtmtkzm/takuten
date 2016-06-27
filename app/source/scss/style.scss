@@ -176,13 +176,14 @@ body {
 		}
 	}
 	.title {
-		$area: 34.218vw;
+		$area: 31.683vw;
 		width: $area;
 		height: $area;
 		position: absolute;
 		top: 4vw;
 		left: 50%;
 		transform: translateX(-50%);
+		opacity: 0;
 		img {
 			position: absolute;
 			top: 50%;
@@ -190,10 +191,10 @@ body {
 			transform-origin: 0% 0%;
 			transform: translate(-50%, -50%);
 			&.takuten {
-				width: 100%;
+				width: 92.6%;
 			}
 			&.dots {
-				width: 108%;
+				width: 100%;
 				animation: rotation 50s linear infinite;
 			}
 			@keyframes rotation {
