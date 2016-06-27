@@ -176,9 +176,9 @@
 						<h3>遊び心を取り入れたWeb制作</h3>
 						<p>3~4人ずつのグループに別れて音楽を制作する卓。グループごとにテーマを掲げ、そのテーマにそってメンバー各々が制作した楽曲を合わせて１つの作品とする。殆どのメンバーがDTMによる音楽制作に初挑戦ながら、短期間の間で基本的なDAWの操作からスケールなどの簡単な音楽理論などを学び、1から音楽制作に取り組む。</p>
 					</div>
-					<div class="p-logo"><img src="./images/detail/wavwav/logo.png" alt="" data-enllax-ratio="0.07" data-enllax-type="foreground"></div>
+					<div class="p-logo"><img src="./images/detail/jackin/logo.png" alt="" data-enllax-ratio="0.07" data-enllax-type="foreground"></div>
 					<div class="p-img1 b"><img src="./images/detail/doodle/1.png" alt="" data-enllax-ratio="-0.07" data-enllax-type="foreground"></div>
-					<div class="p-img2 s mini"><img src="./images/detail/wavwav/2.png" alt="" data-enllax-ratio="-0.07" data-enllax-type="foreground"></div>
+					<div class="p-img2 s mini"><img src="./images/detail/doodle/2.png" alt="" data-enllax-ratio="-0.07" data-enllax-type="foreground"></div>
 					<div class="p-img3 g"><img src="./images/detail/doodle/3.png" alt="" data-enllax-ratio="0.07" data-enllax-type="foreground"></div>
 				</section>
 			</section>
@@ -221,8 +221,34 @@
 		</nav>
 	</aside>
 	<footer id="footer">
-		<p class="share-btn"><img src="./images/social/share.png" alt="シェア"></p>
-		<p class="tweet-btn"><img src="./images/social/tweet.png" alt="ツイート"></p>
+		<div class="sns-share">
+			<ul>
+				<script>
+					var w = 500, h = 350;
+					var wPosX = (window.innerWidth-w)/2, wPosY = (window.innerHeight-h)/2;
+					function twitterPopup(){
+						var url = 'https://twitter.com/share?';
+						url += 'text=' + encodeURI('卓展2016｜デザインを学ぶ学生による12のプロジェクトの成果発表・展示会');
+						url += '&url=' + encodeURI('http://taku-ten.com/');
+						url += '&hashtags=' + '卓展2016, 卓展';
+						window.open(url, 'tweetwin', 'width='+w+',height='+h+',left='+wPosX+',top='+wPosY+',menubar=no,toolbar=no,scrollbars=yes');
+					}
+					function facebookPopup() {
+						var url = 'http://www.facebook.com/share.php?';
+						url += '&u=' + encodeURI('http://taku-ten.com/');
+						window.open(url, 'FBwindow', 'width='+w+',height='+h+',left='+wPosX+',top='+wPosY+',menubar=no,toolbar=no,scrollbars=yes');
+					}
+				</script>
+				<li class="twitter sns-share-btn" onclick="twitterPopup();">
+					<img src="./images/social/tweet.png" alt="ツイート">
+				</li>
+				<li class="facebook sns-share-btn" onclick="facebookPopup();">
+					<img src="./images/social/share.png" alt="シェア">
+				</li>
+			</ul>
+		</div>
+		<p class="share-btn"></p>
+		<p class="tweet-btn"></p>
 		<small class="copyright">&copy; 2016 卓展</small>
 	</footer>
 	<% include _script %>
