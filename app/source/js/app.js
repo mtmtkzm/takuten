@@ -44,7 +44,7 @@ var defaultWidth = mvTitle.width();
 
 function titleAnimate() {
     mvTitle.animate({
-        width: defaultWidth*1.02,
+        width: defaultWidth * 1.02,
         opacity: 1
     }, 700, function() {
         $(this).animate({
@@ -54,7 +54,7 @@ function titleAnimate() {
 }
 
 function titleReady() {
-    mvTitle.css('width', defaultWidth*0.7);
+    mvTitle.css('width', defaultWidth * 0.7);
     titleAnimate();
 }
 
@@ -110,15 +110,13 @@ attachHref();
 
 /*  Parallax Scroll
  ************************* */
-$('.js-parallax').enllax();
-// $(window).on('resize load', function(){
-//     var w = $(window).width();
-//     if(w < 1280) {
-//         $('.js-parallax-sp').enllax();
-//     } else {
-//         $('.js-parallax').enllax();
-//     }
-// });
+$(window).on('load resize', function() {
+    var ww = $(window).width();
+    if(ww >= 1280) {
+        $('.js-parallax').enllax();
+    }
+});
+
 
 /*  Scroll Fadein
  ************************* */
