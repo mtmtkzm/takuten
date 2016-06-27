@@ -44,11 +44,11 @@ var originArray = []; // 初期表示順
 
 // 各要素を取得
 var list = document.querySelector('.js-randomList');
-var listItem = document.querySelectorAll('.js-randomListItem');
-var progressAnchor = document.querySelectorAll('.js-progressAnchor');
+var listItem = $('.js-randomListItem');
+var progressAnchor = $('.js-progressAnchor');
 
-listItem.forEach(function(v, i, a) {
-    originArray.push(v.outerHTML);
+listItem.each(function(v) {
+    originArray.push($(this).prop('outerHTML'));
 });
 
 var randomNum = [];
@@ -67,9 +67,7 @@ function shuffle(array) {
 var randomArray = shuffle(originArray);
 
 // 元の表示をクリア（削除）
-Array.prototype.forEach.call(listItem, function(node) {
-    list.removeChild(node);
-});
+$('.js-randomListItem').remove();
 
 // ランダムで並び替えたものを、入れ直し
 for (var i = 0; i < randomArray.length; i++) {
@@ -79,8 +77,9 @@ for (var i = 0; i < randomArray.length; i++) {
 /*  Attach href Attr
  ************************* */
 function attachHref() {
-    progressAnchor.forEach(function(v, i, a) {
-        a[i].setAttribute('href', '#' + document.querySelectorAll('.js-progress')[i].id);
+    progressAnchor.each(function(i, elm) {
+        var id = $('.js-progress').eq(i).attr('id');
+        $(elm).attr('href', '#'+id);
     });
 }
 attachHref();
