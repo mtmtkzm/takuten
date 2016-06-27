@@ -12,7 +12,7 @@ body {
 	background-color: #eff2f5;
 	letter-spacing: 1px;
 	font-weight: bold;
-	@include media(u-tablet) {
+	@include media(tb) {
 		img {
 			display: block;
 			width: 96%;
@@ -45,13 +45,28 @@ body {
 	background: url("../images/common/bg3.png");
 }
 
+.media-pc {
+	@include media(tb) {
+		display: none;
+	}
+}
+.media-tb {
+	@include media(pc) {
+		display: none;
+	}
+	@include media(minipc) {
+		display: none;
+	}
+}
+
 #banner {
 	height: 53.125vw;
-	@include media(u-tablet) {
-		height: 178vw;
+	@include media(tb) {
+		height: 174vw;
 	}
 	background-color: #eff2f5;
-	.symbols {
+	.symbols,
+	.symbols-sp {
 		min-width: 1100px;
 		img {
 			position: absolute;
@@ -60,117 +75,119 @@ body {
 				top: 3vw;
 				left: 3vw;
 				width: 14.9vw;
-				@include media(u-tablet) {
+				@include media(tb) {
 					left: 4vw;
-					width: 23vw;
+					width: 27vw;
 				}
 			}
 			&.symbol_02 {
 				top: 3vw;
 				left: 19.5vw;
 				width: 18vw;
-				@include media(u-tablet) {
-					top: 94vw;
-					left: 67vw;
-					width: 30vw;
+				@include media(tb) {
+					top: 3vw;
+					left: 52vw;
+					width: 45vw;
 				}
 			}
 			&.symbol_03 {
 				top: 21.5vw;
 				left: 3vw;
 				width: 16.4vw;
-				@include media(u-tablet) {
-					top: 97vw;
-					width: 27vw;
+				@include media(tb) {
+					top: 12vw;
+					left: 35.5vw;
+					width: 30vw;
 				}
 			}
-			&.symbol_04 { //up
+			&.symbol_04 {
 				top: 18vw;
 				left: 18.5vw;
 				width: 12.35vw;
-				@include media(u-tablet) {
-					top: 32vw;
-					left: 82vw;
-					width: 15vw;
+				@include media(tb) {
+					top: 33vw;
+					left: 3vw;
+					width: 24vw;
 				}
 			}
-			&.symbol_05 { //art
+			&.symbol_05 {
 				top: 37.5vw;
 				left: 3vw;
 				width: 20.083vw;
-				@include media(u-tablet) {
-					top: 121vw;
-					left: 3vw;
-					width: 29vw;
+				@include media(tb) {
+					top: 28.5vw;
+					left: 30vw;
+					width: 42vw;
 				}
 			}
-			&.symbol_06 { //consumer
+			&.symbol_06 {
 				top: 40.5vw;
 				left: 27.5vw;
 				width: 26.75vw;
-				@include media(u-tablet) {
-					top: 15.5vw;
-					left: 56vw;
-					width: 40vw;
+				@include media(tb) {
+					top: 25.5vw;
+					left: 69vw;
+					width: 30vw;
 				}
 			}
-			&.symbol_07 { //car
+			&.symbol_07 {
 				top: 40.5vw;
 				right: 29vw;
 				width: 12.833vw;
-				@include media(u-tablet) {
-					top: 30vw;
-					right: 79vw;
-					width: 17vw;
+				@include media(tb) {
+					top: 84vw;
+					right: 73.2vw;
+					width: 23vw;
 				}
 			}
-			&.symbol_08 { //game
+			&.symbol_08 {
 				top: 40.5vw;
 				right: 3vw;
 				width: 22.75vw;
-				@include media(u-tablet) {
-					top: 126vw;
-					right: 4vw;
-					width: 35vw;
+				@include media(tb) {
+					top: 104vw;
+					right: 25vw;
+					width: 45.6vw;
 				}
 			}
-			&.symbol_09 { //elect
+			&.symbol_09 {
 				top: 19.5vw;
 				right: 3vw;
 				width: 12vw;
-				@include media(u-tablet) {
-					top: 3vw;
-					right: 51.5vw;
-					width: 17.5vw;
+				@include media(tb) {
+					top: 87.5vw;
+					right: 2.2vw;
+					width: 21vw;
 				}
 			}
-			&.symbol_10 { //music
+			&.symbol_10 {
 				top: 21vw;
 				right: 19vw;
 				width: 11.916vw;
-				@include media(u-tablet) {
-					top: 116vw;
-					left: 10vw;
-					width: 18vw;
+				@include media(tb) {
+					top: 119vw;
+					right: 62.2vw;
+					width: 34vw;
 				}
 			}
-			&.symbol_11 { //color
+			&.symbol_11 {
 				top: 7.5vw;
 				right: 3vw;
 				width: 27.2vw;
-				@include media(u-tablet) {
-					top: 107vw;
-					right: 3vw;
-					width: 39vw;
+				@include media(tb) {
+					top: 116vw;
+					right: 30.5vw;
+					width: 26.5vw;
 				}
 			}
 			&.symbol_12 {
 				top: 3vw;
 				right: 8.5vw;
 				width: 25.48vw;
-				@include media(u-tablet) {
-					right: 4vw;
-					width: 44vw;
+				@include media(tb) {
+					top: 121vw;
+					right: 3vw;
+					width: 25.5vw;
 				}
 			}
 		}
@@ -205,11 +222,11 @@ body {
 				}
 			}
 		}
-		@include media(u-tablet) {
-			$area: 60vw;
+		@include media(tb) {
+			$area: 51vw;
 			width: $area;
 			height: $area;
-			top: 37vw;
+			top: 48vw;
 		}
 	}
 }
@@ -218,13 +235,18 @@ $sidebar: 330px;
 #main {
 	width: calc(100% - #{$sidebar});
 	float: right;
-	@include media(u-tablet) {
+	@include media(minipc) {
+		width: 870px;
+		float: none;
+		margin: 0 auto;
+	}
+	@include media(tb) {
 		width: 100%;
 		float: none;
 	}
 	.main-inner {
 		width: 870px;
-		@include media(u-tablet) {
+		@include media(tb) {
 			width: 95%;
 		}
 		margin: 0 auto;
@@ -232,22 +254,12 @@ $sidebar: 330px;
 	h2 {
 		margin: 15px 0 50px 0;
 		text-align: center;
-		@include media(u-tablet) {
+		@include media(tb) {
 			img {
 				width: 54%;
 				max-width: 272px;
 				height: auto;
 			}
-		}
-	}
-	.media-pc {
-		@include media(u-tablet) {
-			display: none;
-		}
-	}
-	.media-u-tablet {
-		@include media(pc) {
-			display: none;
 		}
 	}
 }
@@ -266,7 +278,7 @@ $sidebar: 330px;
 			color: $blue;
 		}
 	}
-	@include media(u-tablet) {
+	@include media(tb) {
 		h3 {
 			text-align: center;
 			img {
@@ -286,8 +298,8 @@ $sidebar: 330px;
 	.floor-map {
 		text-align: center;
 	}
-	@include media(u-tablet) {
-		.media-u-tablet img {
+	@include media(tb) {
+		.media-tb img {
 			max-width: 718px;
 		}
 	}
@@ -342,7 +354,7 @@ $sidebar: 330px;
 		.bus-detail {
 			margin: 16px 0 0;
 		}
-		@include media(u-tablet) {
+		@include media(tb) {
 			width: 95%;
 			.bus-icon {
 				max-width: 26px;
@@ -352,7 +364,10 @@ $sidebar: 330px;
 }
 
 #sidebar {
-	@include media(u-tablet) {
+	@include media(minipc) {
+		display: none;
+	}
+	@include media(tb) {
 		display: none;
 	}
 	width: 330px;
@@ -429,7 +444,7 @@ $sidebar: 330px;
 		.sns-share-btn {
 			display: inline-block;
 			width: 130px;
-			@include media(u-tablet) {
+			@include media(tb) {
 				img {
 					max-width: 80px;
 				}
