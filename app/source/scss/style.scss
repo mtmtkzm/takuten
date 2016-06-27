@@ -12,6 +12,14 @@ body {
 	background-color: #eff2f5;
 	letter-spacing: 1px;
 	font-weight: bold;
+	@include media(u-tablet) {
+		img {
+			display: block;
+			width: 96%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
 }
 
 .p-bg1,
@@ -144,13 +152,37 @@ $sidebar: 330px;
 #main {
 	width: calc(100% - #{$sidebar});
 	float: right;
+	@include media(u-tablet) {
+		width: 100%;
+		float: none;
+	}
 	.main-inner {
 		width: 870px;
+		@include media(u-tablet) {
+			width: 95%;
+		}
 		margin: 0 auto;
 	}
 	h2 {
 		margin: 15px 0 50px 0;
 		text-align: center;
+		@include media(u-tablet) {
+			img {
+				width: 54%;
+				max-width: 272px;
+				height: auto;
+			}
+		}
+	}
+	.media-pc {
+		@include media(u-tablet) {
+			display: none;
+		}
+	}
+	.media-u-tablet {
+		@include media(pc) {
+			display: none;
+		}
 	}
 }
 
@@ -168,12 +200,30 @@ $sidebar: 330px;
 			color: $blue;
 		}
 	}
+	@include media(u-tablet) {
+		h3 {
+			text-align: center;
+			img {
+				max-width: 627px;
+			}
+		}
+		p,
+		table {
+			width: 95%;
+			margin: 30px auto;
+		}
+	}
 }
 
 .map {
 	margin: 50px 0;
 	.floor-map {
 		text-align: center;
+	}
+	@include media(u-tablet) {
+		.media-u-tablet img {
+			max-width: 718px;
+		}
 	}
 }
 
@@ -230,6 +280,9 @@ $sidebar: 330px;
 }
 
 #sidebar {
+	@include media(u-tablet) {
+		display: none;
+	}
 	width: 330px;
 	position: absolute;
 	padding-top: 10px;

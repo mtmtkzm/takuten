@@ -88,7 +88,15 @@ attachHref();
 
 /*  Parallax Scroll
  ************************* */
-$('.js-parallax').enllax();
+
+$(window).on('resize load', function(){
+    var w = $(window).width();
+    if(w < 1280) {
+        $('.js-parallax-sp').enllax();
+    } else {
+        $('.js-parallax').enllax();
+    }
+});
 
 /*  Scroll Fadein
  ************************* */

@@ -2,13 +2,27 @@
     .p-text {
         left: 0;
         width: 480px;
+        @include media(u-tablet) {
+            left: 2.5%;
+            width: 95%;
+        }
         z-index: 1;
     }
     .p-logo {
         z-index: 1;
+        @include media(u-tablet) {
+            width: 50%;
+            max-width: 310px;
+            height: auto;
+        }
     }
     .p-img1,.p-img2,.p-img3 {
         z-index: 0;
+    }
+    .p-img2 {
+        @include media(u-tablet) {
+            display: none;
+        }
     }
 }
 
