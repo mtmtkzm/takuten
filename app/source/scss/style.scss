@@ -47,6 +47,9 @@ body {
 
 #banner {
 	height: 53.125vw;
+	@include media(u-tablet) {
+		height: 178vw;
+	}
 	background-color: #eff2f5;
 	.symbols {
 		min-width: 1100px;
@@ -57,61 +60,118 @@ body {
 				top: 3vw;
 				left: 3vw;
 				width: 14.9vw;
+				@include media(u-tablet) {
+					left: 4vw;
+					width: 23vw;
+				}
 			}
 			&.symbol_02 {
 				top: 3vw;
 				left: 19.5vw;
 				width: 18vw;
+				@include media(u-tablet) {
+					top: 94vw;
+					left: 67vw;
+					width: 30vw;
+				}
 			}
 			&.symbol_03 {
 				top: 21.5vw;
 				left: 3vw;
 				width: 16.4vw;
+				@include media(u-tablet) {
+					top: 97vw;
+					width: 27vw;
+				}
 			}
-			&.symbol_04 {
+			&.symbol_04 { //up
 				top: 18vw;
 				left: 18.5vw;
 				width: 12.35vw;
+				@include media(u-tablet) {
+					top: 32vw;
+					left: 82vw;
+					width: 15vw;
+				}
 			}
-			&.symbol_05 {
+			&.symbol_05 { //art
 				top: 37.5vw;
 				left: 3vw;
 				width: 20.083vw;
+				@include media(u-tablet) {
+					top: 121vw;
+					left: 3vw;
+					width: 29vw;
+				}
 			}
-			&.symbol_06 {
+			&.symbol_06 { //consumer
 				top: 40.5vw;
 				left: 27.5vw;
 				width: 26.75vw;
+				@include media(u-tablet) {
+					top: 15.5vw;
+					left: 56vw;
+					width: 40vw;
+				}
 			}
-			&.symbol_07 {
+			&.symbol_07 { //car
 				top: 40.5vw;
 				right: 29vw;
 				width: 12.833vw;
+				@include media(u-tablet) {
+					top: 30vw;
+					right: 79vw;
+					width: 17vw;
+				}
 			}
-			&.symbol_08 {
+			&.symbol_08 { //game
 				top: 40.5vw;
 				right: 3vw;
 				width: 22.75vw;
+				@include media(u-tablet) {
+					top: 126vw;
+					right: 4vw;
+					width: 35vw;
+				}
 			}
-			&.symbol_09 {
+			&.symbol_09 { //elect
 				top: 19.5vw;
 				right: 3vw;
 				width: 12vw;
+				@include media(u-tablet) {
+					top: 3vw;
+					right: 51.5vw;
+					width: 17.5vw;
+				}
 			}
-			&.symbol_10 {
+			&.symbol_10 { //music
 				top: 21vw;
 				right: 19vw;
 				width: 11.916vw;
+				@include media(u-tablet) {
+					top: 116vw;
+					left: 10vw;
+					width: 18vw;
+				}
 			}
-			&.symbol_11 {
+			&.symbol_11 { //color
 				top: 7.5vw;
 				right: 3vw;
 				width: 27.2vw;
+				@include media(u-tablet) {
+					top: 107vw;
+					right: 3vw;
+					width: 39vw;
+				}
 			}
 			&.symbol_12 {
 				top: 3vw;
-				right: 9.5vw;
+				right: 8.5vw;
 				width: 25.48vw;
+				@include media(u-tablet) {
+					right: 4vw;
+					width: 44vw;
+				}
 			}
 		}
 	}
@@ -144,6 +204,12 @@ body {
 					transform: rotate(360deg) translate(-50%, -50%);
 				}
 			}
+		}
+		@include media(u-tablet) {
+			$area: 60vw;
+			width: $area;
+			height: $area;
+			top: 37vw;
 		}
 	}
 }
@@ -276,6 +342,12 @@ $sidebar: 330px;
 		.bus-detail {
 			margin: 16px 0 0;
 		}
+		@include media(u-tablet) {
+			width: 95%;
+			.bus-icon {
+				max-width: 26px;
+			}
+		}
 	}
 }
 
@@ -357,6 +429,11 @@ $sidebar: 330px;
 		.sns-share-btn {
 			display: inline-block;
 			width: 130px;
+			@include media(u-tablet) {
+				img {
+					max-width: 80px;
+				}
+			}
 			margin: 60px 0 80px 0;
 			&:hover {
 				cursor: pointer;
@@ -364,7 +441,6 @@ $sidebar: 330px;
 		}
 	}
 	.copyright {
-
 		color: #fff;
 		font-size: 12px;
 	}
