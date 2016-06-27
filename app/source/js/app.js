@@ -90,6 +90,18 @@ attachHref();
  ************************* */
 $('.js-parallax').enllax();
 
+/*  Scroll Fadein
+ ************************* */
+var scrollFadein = $('.js-scrollFadein');
+$(window).on('scroll load', function() {
+    var scrollTop = $(window).scrollTop();
+    scrollFadein.each(function(i, elm) {
+        var targetPos = $(this).offset().top;
+        if(scrollTop > targetPos - $(window).height() + 200) {
+            $(this).animate({ opacity: 1 }, 500);
+        }
+    });
+});
 
 /*  Change Nav-status
  ************************* */
@@ -134,8 +146,6 @@ $(window).on('scroll load', function() {
 
 /*  Google Maps API
  ************************* */
-
-
 function initialize() {
     var LatLng = new google.maps.LatLng(35.181691, 136.947799);
     var MY_MAPTYPE_ID = '卓展2016 会場';
