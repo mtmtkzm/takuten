@@ -283,7 +283,9 @@ $sidebar: 330px;
     .gnav {
         font-size: 13px;
         letter-spacing: 1.9px;
-        margin: 110px 0 0 65px;
+        position: relative;
+        top: 82px;
+        left: 65px;
         li {
             width: 90px;
             margin: 28px 0;
@@ -308,12 +310,9 @@ $sidebar: 330px;
 
 #footer {
     width: 100%;
-    overflow: hidden;
     text-align: center;
-    clear: both;
     height: 300px;
     background: #c2d0d7;
-    z-index: -1;
     .sns-share {
         .sns-share-btn {
             display: inline-block;
