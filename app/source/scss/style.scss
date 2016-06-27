@@ -9,149 +9,149 @@
 ************************* */
 
 body {
-    background-color: #eff2f5;
-    letter-spacing: 1px;
-    font-weight: bold;
+	background-color: #eff2f5;
+	letter-spacing: 1px;
+	font-weight: bold;
 }
 
 .p-bg1,
 .p-bg2,
 .p-bg3 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -2;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -2;
 }
 
 .p-bg1 {
-    background: url("../images/common/bg1.png");
+	background: url("../images/common/bg1.png");
 }
 
 .p-bg2 {
-    background: url("../images/common/bg2.png");
+	background: url("../images/common/bg2.png");
 }
 
 .p-bg3 {
-    background: url("../images/common/bg3.png");
+	background: url("../images/common/bg3.png");
 }
 
 #banner {
-    height: 53.125vw;
-    background-color: #eff2f5;
-    .symbols {
-        min-width: 1100px;
-        img {
-            position: absolute;
-            display: none;
-            &.symbol_01 {
-                top: 3vw;
-                left: 3vw;
-                width: 14.9vw;
-            }
-            &.symbol_02 {
-                top: 3vw;
-                left: 19.5vw;
-                width: 18vw;
-            }
-            &.symbol_03 {
-                top: 21.5vw;
-                left: 3vw;
-                width: 16.4vw;
-            }
-            &.symbol_04 {
-                top: 18vw;
-                left: 18.5vw;
-                width: 12.35vw;
-            }
-            &.symbol_05 {
-                top: 37.5vw;
-                left: 3vw;
-                width: 20.083vw;
-            }
-            &.symbol_06 {
-                top: 40.5vw;
-                left: 27.5vw;
-                width: 26.75vw;
-            }
-            &.symbol_07 {
-                top: 40.5vw;
-                right: 29vw;
-                width: 12.833vw;
-            }
-            &.symbol_08 {
-                top: 40.5vw;
-                right: 3vw;
-                width: 22.75vw;
-            }
-            &.symbol_09 {
-                top: 19.5vw;
-                right: 3vw;
-                width: 12vw;
-            }
-            &.symbol_10 {
-                top: 21vw;
-                right: 19vw;
-                width: 11.916vw;
-            }
-            &.symbol_11 {
-                top: 7.5vw;
-                right: 3vw;
-                width: 27.2vw;
-            }
-            &.symbol_12 {
-                top: 3vw;
-                right: 9.5vw;
-                width: 25.48vw;
-            }
-        }
-    }
-    .title {
-        $area: 34.218vw;
-        width: $area;
-        height: $area;
-        position: absolute;
-        top: 4vw;
-        left: 50%;
-        transform: translateX(-50%);
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform-origin: 0% 0%;
-            transform: translate(-50%, -50%);
-            &.takuten {
-                width: 100%;
-            }
-            &.dots {
-                width: 108%;
-                animation: rotation 50s linear infinite;
-            }
-            @keyframes rotation {
-                from {
-                    transform: rotate(0deg) translate(-50%, -50%);
-                }
-                to {
-                    transform: rotate(360deg) translate(-50%, -50%);
-                }
-            }
-        }
-    }
+	height: 53.125vw;
+	background-color: #eff2f5;
+	.symbols {
+		min-width: 1100px;
+		img {
+			position: absolute;
+			display: none;
+			&.symbol_01 {
+				top: 3vw;
+				left: 3vw;
+				width: 14.9vw;
+			}
+			&.symbol_02 {
+				top: 3vw;
+				left: 19.5vw;
+				width: 18vw;
+			}
+			&.symbol_03 {
+				top: 21.5vw;
+				left: 3vw;
+				width: 16.4vw;
+			}
+			&.symbol_04 {
+				top: 18vw;
+				left: 18.5vw;
+				width: 12.35vw;
+			}
+			&.symbol_05 {
+				top: 37.5vw;
+				left: 3vw;
+				width: 20.083vw;
+			}
+			&.symbol_06 {
+				top: 40.5vw;
+				left: 27.5vw;
+				width: 26.75vw;
+			}
+			&.symbol_07 {
+				top: 40.5vw;
+				right: 29vw;
+				width: 12.833vw;
+			}
+			&.symbol_08 {
+				top: 40.5vw;
+				right: 3vw;
+				width: 22.75vw;
+			}
+			&.symbol_09 {
+				top: 19.5vw;
+				right: 3vw;
+				width: 12vw;
+			}
+			&.symbol_10 {
+				top: 21vw;
+				right: 19vw;
+				width: 11.916vw;
+			}
+			&.symbol_11 {
+				top: 7.5vw;
+				right: 3vw;
+				width: 27.2vw;
+			}
+			&.symbol_12 {
+				top: 3vw;
+				right: 9.5vw;
+				width: 25.48vw;
+			}
+		}
+	}
+	.title {
+		$area: 34.218vw;
+		width: $area;
+		height: $area;
+		position: absolute;
+		top: 4vw;
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform-origin: 0% 0%;
+			transform: translate(-50%, -50%);
+			&.takuten {
+				width: 100%;
+			}
+			&.dots {
+				width: 108%;
+				animation: rotation 50s linear infinite;
+			}
+			@keyframes rotation {
+				from {
+					transform: rotate(0deg) translate(-50%, -50%);
+				}
+				to {
+					transform: rotate(360deg) translate(-50%, -50%);
+				}
+			}
+		}
+	}
 }
 
 $sidebar: 330px;
 #main {
-    width: calc(100% - #{$sidebar});
-    float: right;
-    .main-inner {
-        width: 870px;
-        margin: 0 auto;
-    }
-    h2 {
-        margin: 15px 0 50px 0;
-        text-align: center;
-    }
+	width: calc(100% - #{$sidebar});
+	float: right;
+	.main-inner {
+		width: 870px;
+		margin: 0 auto;
+	}
+	h2 {
+		margin: 15px 0 50px 0;
+		text-align: center;
+	}
 }
 
 .about {
@@ -178,57 +178,33 @@ $sidebar: 330px;
 }
 
 .intro {
-    .intro-detail {
-        position: relative;
-        opacity: 0;
-        .p-text,
-        .p-logo,
-        .p-img1,
-        .p-img2,
-        .p-img3 {
-            position: absolute;
-            &::after {
-                content: '';
-                display: block;
-                position: relative;
-                left: 20px;
-                bottom: 270px;
-                z-index: -1;
-                width: 92%;
-                height: 290px;
-                background: repeat 0 0;
-            }
-            &.b::after {
-                // background-image: url('../images/detail/bg/b.png');
-            }
-            &.g::after {
-                // background-image: url('../images/detail/bg/g.png');
-            }
-            &.s::after {
-                // background-image: url('../images/detail/bg/s.png');
-            }
-            &.mini::after {
-                height: 230px;
-                bottom: 200px;
-            }
-            img {
-                width: 92%;
-                height: auto;
-            }
-        }
-        .intro-text {
-            h3 {
-                font-size: 29px;
-                margin: .8em 0 .7em 0;
-                text-shadow: 4px 4px 0 rgba(255, 255, 255, 1);
-                line-height: 1.1em;
-            }
-            p {
-                line-height: 1.95em;
-                text-align: justify;
-            }
-        }
-    }
+	.intro-detail {
+		position: relative;
+		opacity: 0;
+		.p-text,
+		.p-logo,
+		.p-img1,
+		.p-img2,
+		.p-img3 {
+			position: absolute;
+			img {
+				width: 92%;
+				height: auto;
+			}
+		}
+		.intro-text {
+			h3 {
+				font-size: 29px;
+				margin: .8em 0 .7em 0;
+				text-shadow: 4px 4px 0 rgba(255, 255, 255, 1);
+				line-height: 1.1em;
+			}
+			p {
+				line-height: 1.95em;
+				text-align: justify;
+			}
+		}
+	}
 }
 
 .access {
@@ -254,85 +230,89 @@ $sidebar: 330px;
 }
 
 #sidebar {
-    width: 330px;
-    position: absolute;
-    padding-top: 10px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    .progress {
-        position: relative;
-        .progress-title {
-            width: 155px;
-            position: relative;
-            padding-top: 20px;
-            padding-left: 20px;
-            z-index: 1;
-        }
-        .progress-dots {
-            position: absolute;
-            z-index: 0;
-            top: 0;
-            left: 0;
-            circle {
-                fill: #e1e6e6;
-                r: 4.5;
-                transition: .3s ease;
-                transition-property: fill, r;
-                &.visible {
-                    fill: #053077;
-                }
-                &.now {
-                    r: 7;
-                }
-                &:hover {
-                    r: 7;
-                    fill: #053077;
-                }
-            }
-        }
-    }
-    .gnav {
-        font-size: 13px;
-        letter-spacing: 1.9px;
-        position: relative;
-        top: 82px;
-        left: 65px;
-        li {
-            width: 90px;
-            margin: 28px 0;
-            text-align: center;
-        }
-        a {
-            padding-bottom: 2px;
-            color: $base-font-color;
-            text-decoration: none;
-            text-shadow: 2.5px 2.5px 0 rgba(255, 255, 255, 1);
-        }
-    }
-    &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    &.static {
-        position: static;
-    }
+	width: 330px;
+	position: absolute;
+	padding-top: 10px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	.progress {
+		position: relative;
+		.progress-title {
+			width: 155px;
+			position: relative;
+			padding-top: 20px;
+			padding-left: 20px;
+			z-index: 1;
+		}
+		.progress-dots {
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			left: 0;
+			circle {
+				fill: #e1e6e6;
+				r: 4.5;
+				transition: .3s ease;
+				transition-property: fill, r;
+				&.visible {
+					fill: #053077;
+				}
+				&.now {
+					r: 7;
+				}
+				&:hover {
+					r: 7;
+					fill: #053077;
+				}
+			}
+		}
+	}
+	.gnav {
+		font-size: 13px;
+		letter-spacing: 1.9px;
+		position: relative;
+		top: 82px;
+		left: 65px;
+		li {
+			width: 90px;
+			margin: 28px 0;
+			text-align: center;
+		}
+		a {
+			padding-bottom: 2px;
+			color: $base-font-color;
+			text-decoration: none;
+			text-shadow: 2.5px 2.5px 0 rgba(255, 255, 255, 1);
+		}
+	}
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	&.static {
+		position: static;
+	}
 }
 
 #footer {
-    width: 100%;
-    text-align: center;
-    height: 300px;
-    background: #c2d0d7;
-    .sns-share {
-        .sns-share-btn {
-            display: inline-block;
-            width: 130px;
-            margin: 80px 0 0;
-        }
-    }
-    .copyright {
-        color: #fff;
-        font-size: 12px;
-    }
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+	background: #acc0cd;
+	.sns-share {
+		.sns-share-btn {
+			display: inline-block;
+			width: 130px;
+			margin: 60px 0 80px 0;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.copyright {
+
+		color: #fff;
+		font-size: 12px;
+	}
 }
