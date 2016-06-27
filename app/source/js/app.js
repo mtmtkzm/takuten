@@ -166,12 +166,12 @@ function initialize() {
         mapTypeId: MY_MAPTYPE_ID
     };
     var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    var image = {
+        url: './images/access/gm_icon.png',
+        scaledSize: new google.maps.Size(56, 64)
+    }
     var marker = new google.maps.Marker({
-        icon: new google.maps.MarkerImage(
-            './images/map/gm_icon.png', //画像ファイルのパス
-            new google.maps.Size(50, 80), //アイコンの表示サイズ(縦,横)
-            new google.maps.Point(0, 0)
-        ),
+        icon: image,
         position: LatLng,
         map: map
     });

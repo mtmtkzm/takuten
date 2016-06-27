@@ -155,20 +155,26 @@ $sidebar: 330px;
 }
 
 .about {
-    p {
-        margin: 30px 0;
-        line-height: 2.1em;
-    }
-    table {
-        td {
-            padding: 7px 0;
-            text-shadow: 3px 2.5px 0 rgba(255, 255, 255, 1);
-        }
-    }
+	p {
+		margin: 30px 0;
+		line-height: 2.1em;
+	}
+	table {
+		td {
+			padding: 7px 0;
+			text-shadow: 3px 2.5px 0 rgba(255,255,255,1);
+		}
+		a {
+			color: $blue;
+		}
+	}
 }
 
 .map {
-    margin: 50px 0 0;
+	margin: 50px 0;
+	.floor-map {
+		text-align: center;
+	}
 }
 
 .intro {
@@ -226,20 +232,25 @@ $sidebar: 330px;
 }
 
 .access {
-    padding-bottom: 100px;
-    .googlemap {
-        width: 100%;
-        height: 350px;
-        background-color: #eee;
-    }
-    .bus-recommend {
-        margin: 30px 0 12px 0;
-        span {
-            display: inline-block;
-            vertical-align: top;
-            padding: 3px 0 0 5px;
-        }
-    }
+	padding-bottom: 100px;
+	.googlemap {
+		width: 88%;
+		height: 350px;
+		margin: 0 auto;
+		background-color: #eee;
+	}
+	.bus-recommend {
+		width: 86%;
+		margin: 36px auto 12px auto;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			padding: 3px 0 0 5px;
+		}
+		.bus-detail {
+			margin: 16px 0 0;
+		}
+	}
 }
 
 #sidebar {
