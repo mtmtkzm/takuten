@@ -125,7 +125,10 @@ $sidebar: 330px;
 }
 
 .map {
-	margin: 50px 0 0;
+	margin: 50px 0;
+	.floor-map {
+		text-align: center;
+	}
 }
 
 .intro {
