@@ -71,73 +71,73 @@ $(window).on('resize', function() {
     mvTitle.css('width', $(window).width() * 0.37);
 });
 
+function dotAnimation() {
+    // Convert rad
+    function rad(deg) {
+        return deg * (Math.PI / 180);
+    }
+    // Delete under priod
+    function floatFormat(number, n) {
+        var _pow = Math.pow(10, n);
+        return Math.round(number * _pow) / _pow;
+    }
 
-// function dotAnimation() {
-//     // Convert rad
-//     function rad(deg) {
-//         return deg * (Math.PI / 180);
-//     }
-//     // Delete under priod
-//     function floatFormat(number, n) {
-//         var _pow = Math.pow(10, n);
-//         return Math.round(number * _pow) / _pow;
-//     }
 
+    var whole_r = $(window).width() * 0.36 / 2; // 円全体の半径
+    var dot_r = 5; // 各円（dot）の半径
 
-//     var whole_r = $(window).width() * 0.37 / 2; // 円全体の半径
-//     var dot_r = 5; // 各円（dot）の半径
+    function arrangeDot() {
+        var coor = { x: [], y: [] };
+        for (var i = 0; i < 72; i++) {
+            var originCX = Math.sin(rad(5 * i)) * whole_r;
+            var originCY = Math.cos(rad(5 * i)) * whole_r;
+            var cx = floatFormat(originCX, 3);
+            var cy = floatFormat(originCY, 3);
+            coor.x[i] = cx + whole_r + dot_r;
+            coor.y[i] = cy + whole_r + dot_r;
+        }
 
-//     function arrangeDot() {
-//         var coor = { x: [], y: [] };
-//         for (var i = 0; i < 72; i++) {
-//             var originCX = Math.sin(rad(5 * i)) * whole_r;
-//             var originCY = Math.cos(rad(5 * i)) * whole_r;
-//             var cx = floatFormat(originCX, 3);
-//             var cy = floatFormat(originCY, 3);
-//             coor.x[i] = cx + whole_r + dot_r;
-//             coor.y[i] = cy + whole_r + dot_r;
-//         }
+        $('.circle').each(function(i) {
+            $(this).css({
+                cx: coor.x[i],
+                cy: coor.y[i],
+                r: dot_r
+            });
+        });
+    }
 
-//         $('.circle').each(function(i) {
-//             $(this).css({
-//                 cx: coor.x[i],
-//                 cy: coor.y[i],
-//                 r: dot_r
-//             });
-//         });
-//     }
+    function randomDot(i, elm, ranX, ranY) {
+        setTimeout(function() {
+            $(elm).attr({
+                cx: ranX,
+                cy: ranY,
+                r: 5
+            });
+            $(elm).animate({
+                opacity: 1
+            })
+            if (i > 70) {
+                setTimeout(function() {
+                    arrangeDot();
+                }, 2000)
+            }
+        }, i * 50);
+    }
 
-//     function randomDot(i, elm, ranX, ranY) {
-//         setTimeout(function() {
-//             $(elm).attr({
-//                 cx: ranX,
-//                 cy: ranY,
-//                 r: 5
-//             });
-//             $(elm).animate({
-//                 opacity: 1
-//             })
-//             if (i > 70) {
-//                 setTimeout(function() {
-//                     arrangeDot();
-//                 }, 2000)
-//             }
-//         }, i * 50);
-//     }
+    function orderFade(i, elm) {
+        setTimeout(function() {
+            $(elm).animate({
+                opacity: 1
+            });
+        }, i * 11);
+    }
 
-//     function orderFade(i, elm) {
-//         setTimeout(function() {
-//             $(elm).animate({
-//                 opacity: 1
-//             });
-//         }, i * 11);
-//     }
-
-//     arrangeDot();
-//     $('.circle').each(function(i, elm) {
-//         orderFade(i, elm);
-//     });
-// }
+    arrangeDot();
+    $('.circle').each(function(i, elm) {
+        orderFade(i, elm);
+    });
+}
+dotAnimation();
 
 
 
