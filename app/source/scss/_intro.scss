@@ -6,12 +6,12 @@
             left: 2.5%;
             width: 95%;
         }
-        z-index: 1;
+        z-index: 2;
     }
     .p-logo {
         z-index: 1;
         @include media(tb) {
-            width: 50%;
+            width: 60%;
             max-width: 340px;
             height: auto;
         }
@@ -28,11 +28,25 @@
 
 #branco {
     height: 1100px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 390px;
+        @include media(tb) {
+            margin: 76px auto 30px auto;
+        }
     }
     .p-logo {
         top: 250px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+        }
+        @include media(sp) {
+            top: 29vw;
+        }
         right: 0;
     }
     .p-img1 {
@@ -51,11 +65,22 @@
 
 #brica {
     height: 1190px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 390px;
+        @include media(tb) {
+            top: 350px;
+        }
     }
     .p-logo {
         top: 280px;
+        @include media(tb) {
+            position: absolute;
+            top: 290px;
+        }
         left: 0;
     }
     .p-img1 {
@@ -69,16 +94,28 @@
     .p-img3 {
         top: 760px;
         left: 0;
+        @include media(tb) {
+            top: 640px;
+        }
     }
 }
 
 #san65 {
     height: 1170px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 400px;
     }
     .p-logo {
         top: 140px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+            max-width: 310px;
+        }
         right: 0;
     }
     .p-img1 {
@@ -92,16 +129,28 @@
     .p-img3 {
         top: 720px;
         left: 0;
+        @include media(tb) {
+            top: 670px;
+        }
     }
 }
 
 #gafe {
     height: 1200px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 450px;
     }
     .p-logo {
         top: 180px;
+        @include media(tb) {
+            position: absolute;
+            top: 220px;
+            max-width: 310px;
+        }
         left: 0;
     }
     .p-img1 {
@@ -115,16 +164,27 @@
     .p-img3 {
         top: 740px;
         left: 0;
+        @include media(tb) {
+            top: 700px;
+        }
     }
 }
 
 #doodle {
     height: 1160px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 400px;
     }
     .p-logo {
         top: 250px;
+        @include media(tb) {
+            position: absolute;
+            top: 250px;
+        }
         right: 0;
     }
     .p-img1 {
@@ -137,17 +197,29 @@
     }
     .p-img3 {
         top: 690px;
+        @include media(tb) {
+            top: 670px;
+        }
         left: 0;
     }
 }
 
 #res {
     height: 1140px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 400px;
     }
     .p-logo {
         top: 120px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+            max-width: 310px;
+        }
         left: 0;
     }
     .p-img1 {
@@ -166,11 +238,19 @@
 
 #careco {
     height: 1200px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 440px;
     }
     .p-logo {
         top: 200px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+        }
         right: 0;
     }
     .p-img1 {
@@ -184,16 +264,27 @@
     .p-img3 {
         top: 760px;
         left: 0;
+        @include media(tb) {
+            top: 720px;
+        }
     }
 }
 
 #jackin {
     height: 1180px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 440px;
     }
     .p-logo {
         top: 240px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+        }
         left: 0;
     }
     .p-img1 {
@@ -212,11 +303,19 @@
 
 #irodori {
     height: 1200px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 440px;
     }
     .p-logo {
         top: 300px;
+        @include media(tb) {
+            position: absolute;
+            top: 370px;
+        }
         right: 0;
     }
     .p-img1 {
@@ -229,17 +328,28 @@
     }
     .p-img3 {
         top: 760px;
+        @include media(tb) {
+            top: 710px;
+        }
         left: 0;
     }
 }
 
 #mixm {
     height: 1180px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 420px;
     }
     .p-logo {
         top: 90px;
+        @include media(tb) {
+            position: absolute;
+            top: 170px;
+        }
         left: 0;
     }
     .p-img1 {
@@ -252,17 +362,28 @@
     }
     .p-img3 {
         top: 690px;
+        @include media(tb) {
+            top: 670px;
+        }
         left: 0;
     }
 }
 
 #glyph {
     height: 1200px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 410px;
     }
     .p-logo {
         top: 290px;
+        @include media(tb) {
+            position: absolute;
+            top: 310px;
+        }
         right: 0;
     }
     .p-img1 {
@@ -275,17 +396,28 @@
     }
     .p-img3 {
         top: 730px;
+        @include media(tb) {
+            top: 690px;
+        }
         left: 0;
     }
 }
 
 #wavwav {
     height: 1160px;
+    @include media(tb) {
+        height: auto;
+        padding-bottom: 60px;
+    }
     .p-text {
         top: 420px;
     }
     .p-logo {
         top: 200px;
+        @include media(tb) {
+            position: absolute;
+            top: 220px;
+        }
         left: 0;
     }
     .p-img1 {
