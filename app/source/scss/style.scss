@@ -64,6 +64,9 @@ body {
 	@include media(tb) {
 		height: 174vw;
 	}
+	@include media(sp) {
+		height: 160vw;
+	}
 	background-color: #eff2f5;
 	.symbols,
 	.symbols-sp {
@@ -256,6 +259,7 @@ $sidebar: 330px;
 		margin: 15px 0 50px 0;
 		text-align: center;
 		@include media(tb) {
+			margin: 15px 0 60px 0;
 			img {
 				width: 54%;
 				max-width: 272px;
@@ -316,6 +320,9 @@ $sidebar: 330px;
 		.p-img2,
 		.p-img3 {
 			position: absolute;
+			@include media(tb) {
+				position: static;
+			}
 			img {
 				width: 92%;
 				height: auto;
