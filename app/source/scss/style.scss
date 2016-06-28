@@ -438,6 +438,17 @@ $sidebar: 330px;
 			width: 90px;
 			margin: 28px 0;
 			text-align: center;
+			&.social {
+				a img {
+					padding: 5px;
+					max-width: 30px;
+					max-height: 30px;
+					transition: opacity .2s ease;
+					&:hover {
+						opacity: .85;
+					}
+				}
+			}
 		}
 		a {
 			padding-bottom: 2px;
