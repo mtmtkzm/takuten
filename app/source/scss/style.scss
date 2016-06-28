@@ -454,6 +454,7 @@ $sidebar: 330px;
 }
 
 #nav-sp {
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -474,6 +475,7 @@ $sidebar: 330px;
 	.trigger {
 		position: absolute;
 		right: 0;
+		z-index: 1;
 		width: 50px;
 		height: 50px;
 		background: $blue;
@@ -482,6 +484,16 @@ $sidebar: 330px;
 			width: 23px;
 			padding: 13px 0 0 2px;
 		}
+	}
+	.gnav-sp {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(100,100,100,.5);
+		display: none;
 	}
 }
 

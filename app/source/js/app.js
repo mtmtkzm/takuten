@@ -146,6 +146,7 @@ $(window).on('scroll load', function() {
 /*  Change Nav-status
  ************************* */
 var $jsNav = $('.js-nav');
+var $jsNavSP = $('.js-sp-nav');
 var os = $jsNav.offset().top;
 $(window).on('scroll load', function() {
     var st = $(window).scrollTop();
@@ -155,6 +156,22 @@ $(window).on('scroll load', function() {
     } else {
         $jsNav.addClass('static');
         $jsNav.removeClass('fixed');
+    }
+
+    if(st > $('#main').offset().top) {
+        $('#nav-sp').fadeIn();
+    } else {
+        $('#nav-sp').fadeOut();
+    }
+});
+
+$('.trigger').on('click', function() {
+    if($(this).hasClass('open')) {
+        $('.gnav-sp').fadeOut();
+        $(this).removeClass('open');
+    } else {
+        $('.gnav-sp').fadeIn();
+        $(this).addClass('open');
     }
 });
 
