@@ -15,6 +15,9 @@
             max-width: 340px;
             height: auto;
         }
+        @include media(sp) {
+            width: 50%;
+        }
     }
     .p-img1,.p-img2,.p-img3 {
         z-index: 0;
@@ -30,22 +33,19 @@
     height: 1100px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 390px;
         @include media(tb) {
-            margin: 76px auto 30px auto;
+            margin: 72px auto 38px auto;
         }
     }
     .p-logo {
         top: 250px;
         @include media(tb) {
             position: absolute;
-            top: 170px;
-        }
-        @include media(sp) {
-            top: 29vw;
+            top: 110px;
         }
         right: 0;
     }
@@ -67,21 +67,27 @@
     height: 1190px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 390px;
         @include media(tb) {
-            top: 350px;
+            margin: 70px auto 38px auto;
+        }
+        @include media(sp) {
+            margin: 50px auto 38px auto;
         }
     }
     .p-logo {
         top: 280px;
+        left: 0;
         @include media(tb) {
             position: absolute;
-            top: 290px;
+            top: 300px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 130px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -94,9 +100,6 @@
     .p-img3 {
         top: 760px;
         left: 0;
-        @include media(tb) {
-            top: 640px;
-        }
     }
 }
 
@@ -104,19 +107,25 @@
     height: 1170px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 400px;
+        @include media(tb) {
+            margin: 76px auto 38px auto;
+        }
     }
     .p-logo {
         top: 140px;
+        right: 0;
         @include media(tb) {
             position: absolute;
             top: 170px;
-            max-width: 310px;
+            max-width: 300px;
         }
-        right: 0;
+        @include media(tb) {
+            top: 80px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -129,9 +138,6 @@
     .p-img3 {
         top: 720px;
         left: 0;
-        @include media(tb) {
-            top: 670px;
-        }
     }
 }
 
@@ -139,19 +145,25 @@
     height: 1200px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 450px;
+        @include media(tb) {
+            margin: 80px auto 38px auto;
+        }
     }
     .p-logo {
         top: 180px;
+        left: 0;
         @include media(tb) {
             position: absolute;
             top: 220px;
             max-width: 310px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 120px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -164,9 +176,6 @@
     .p-img3 {
         top: 740px;
         left: 0;
-        @include media(tb) {
-            top: 700px;
-        }
     }
 }
 
@@ -174,18 +183,24 @@
     height: 1160px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 400px;
+        @include media(tb) {
+            margin: 72px auto 38px auto;
+        }
     }
     .p-logo {
         top: 250px;
+        right: 0;
         @include media(tb) {
             position: absolute;
-            top: 250px;
+            top: 280px;
         }
-        right: 0;
+        @include media(sp) {
+            top: 140px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -197,9 +212,6 @@
     }
     .p-img3 {
         top: 690px;
-        @include media(tb) {
-            top: 670px;
-        }
         left: 0;
     }
 }
@@ -208,19 +220,25 @@
     height: 1140px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 400px;
+        @include media(tb) {
+            margin: 88px auto 38px auto;
+        }
     }
     .p-logo {
         top: 120px;
+        left: 0;
         @include media(tb) {
             position: absolute;
-            top: 170px;
-            max-width: 310px;
+            top: 160px;
+            max-width: 290px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 80px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -240,18 +258,25 @@
     height: 1200px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 440px;
+        @include media(tb) {
+            margin: 72px auto 38px auto;
+        }
     }
     .p-logo {
         top: 200px;
+        right: 0;
         @include media(tb) {
             position: absolute;
-            top: 170px;
+            top: 190px;
+            max-width: 300px;
         }
-        right: 0;
+        @include media(sp) {
+            top: 90px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -264,9 +289,6 @@
     .p-img3 {
         top: 760px;
         left: 0;
-        @include media(tb) {
-            top: 720px;
-        }
     }
 }
 
@@ -274,18 +296,24 @@
     height: 1180px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 440px;
+        @include media(tb) {
+            margin: 66px auto 38px auto;
+        }
     }
     .p-logo {
         top: 240px;
+        left: 0;
         @include media(tb) {
             position: absolute;
-            top: 170px;
+            top: 220px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 120px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -305,18 +333,27 @@
     height: 1200px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 440px;
+        @include media(tb) {
+            margin: 60px auto 38px auto;
+        }
+        @include media(tb) {
+            margin: 40px auto 38px auto;
+        }
     }
     .p-logo {
         top: 300px;
+        right: 0;
         @include media(tb) {
             position: absolute;
-            top: 370px;
+            top: 380px;
         }
-        right: 0;
+        @include media(sp) {
+            top: 160px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -328,9 +365,6 @@
     }
     .p-img3 {
         top: 760px;
-        @include media(tb) {
-            top: 710px;
-        }
         left: 0;
     }
 }
@@ -339,18 +373,25 @@
     height: 1180px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 420px;
+        @include media(tb) {
+            margin: 80px auto 38px auto;
+        }
     }
     .p-logo {
         top: 90px;
+        left: 0;
         @include media(tb) {
             position: absolute;
-            top: 170px;
+            top: 150px;
+            max-width: 300px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 80px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -362,9 +403,6 @@
     }
     .p-img3 {
         top: 690px;
-        @include media(tb) {
-            top: 670px;
-        }
         left: 0;
     }
 }
@@ -373,18 +411,24 @@
     height: 1200px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 410px;
+        @include media(tb) {
+            margin: 60px auto 38px auto;
+        }
     }
     .p-logo {
         top: 290px;
+        right: 0;
         @include media(tb) {
             position: absolute;
             top: 310px;
         }
-        right: 0;
+        @include media(sp) {
+            top: 140px;
+        }
     }
     .p-img1 {
         top: 0;
@@ -396,9 +440,6 @@
     }
     .p-img3 {
         top: 730px;
-        @include media(tb) {
-            top: 690px;
-        }
         left: 0;
     }
 }
@@ -407,18 +448,24 @@
     height: 1160px;
     @include media(tb) {
         height: auto;
-        padding-bottom: 60px;
+        padding-bottom: 90px;
     }
     .p-text {
         top: 420px;
+        @include media(tb) {
+            margin: 76px auto 38px auto;
+        }
     }
     .p-logo {
         top: 200px;
+        left: 0;
         @include media(tb) {
             position: absolute;
-            top: 220px;
+            top: 190px;
         }
-        left: 0;
+        @include media(sp) {
+            top: 100px;
+        }
     }
     .p-img1 {
         top: 0;
