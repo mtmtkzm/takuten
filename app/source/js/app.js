@@ -1,40 +1,42 @@
 /*  randomFade
  ************************* */
-var $f_target = $('.js-randomFade'); // FadeInさせる要素
-var $o_target = $('.js-randomOrder'); // FadeInさせる要素
+function symbolFadeIn () {
+    var $f_target = $('.js-randomFade'); // FadeInさせる要素
+    var $o_target = $('.js-randomOrder'); // FadeInさせる要素
 
-var interval = 150; // 150ms感覚でFadeInする
-var length = $f_target.length;
-var count = 0;
+    var interval = 70; // 150ms感覚でFadeInする
+    var length = $f_target.length;
+    var count = 0;
 
-function randomNumber(n) {
-    var i, j, tmp, a = new Array(n);
-    return function() {
-        if (n > 0) {
-            i = n - 1;
-            j = Math.floor(Math.random() * (n));
-            tmp = a[i] || i;
-            a[i] = a[j] || j;
-            a[j] = tmp;
-            n = i;
-            return a[i];
-        } else {
-            return null;
+    function randomNumber(n) {
+        var i, j, tmp, a = new Array(n);
+        return function() {
+            if (n > 0) {
+                i = n - 1;
+                j = Math.floor(Math.random() * (n));
+                tmp = a[i] || i;
+                a[i] = a[j] || j;
+                a[j] = tmp;
+                n = i;
+                return a[i];
+            } else {
+                return null;
+            }
         }
     }
-}
 
-// ランダムフェードイン
-var random = randomNumber(length);
+    // ランダムフェードイン
+    var random = randomNumber(length);
 
-function randomFadeIn(num) {
-    count++;
-    setTimeout(function() {
-        $f_target.eq(num).fadeIn(500);
-    }, interval * count);
-}
-for (var i = random(); i != null; i = random()) {
-    randomFadeIn(i);
+    function randomFadeIn(num) {
+        count++;
+        setTimeout(function() {
+            $f_target.eq(num).fadeIn(300);
+        }, interval * count);
+    }
+    for (var i = random(); i != null; i = random()) {
+        randomFadeIn(i);
+    }
 }
 
 /*  title Animation
@@ -43,13 +45,16 @@ var mvTitle = $('.js-title');
 var defaultWidth = mvTitle.width();
 
 function titleAnimate() {
+    mvTitle.css('width', defaultWidth*0.1);
     mvTitle.animate({
-        width: defaultWidth * 1.02,
+        width: defaultWidth * 1.03,
         opacity: 1
-    }, 700, function() {
-        $(this).animate({
+    }, 800, function() {
+        mvTitle.animate({
             width: defaultWidth
-        }, 300);
+        }, 200, function() {
+            symbolFadeIn();
+        });
     });
 }
 
@@ -58,7 +63,13 @@ function titleReady() {
     titleAnimate();
 }
 
-titleReady();
+$(window).on('load', function() {
+    titleReady();
+});
+$(window).on('resize', function() {
+    console.log(mvTitle.width());
+});
+
 
 
 /*  randomOrder
@@ -209,6 +220,7 @@ function initialize() {
     var customMapType = new google.maps.StyledMapType(featureOptions, styledMapOptions);
     map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 }
+setTimeout(initialize(), 250);
 
 /*  Smooth Scroll
  ************************* */
