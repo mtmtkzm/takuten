@@ -124,7 +124,7 @@ attachHref();
  ************************* */
 $(window).on('load resize', function() {
     var ww = $(window).width();
-    if(ww >= 1280) {
+    if(ww > 768) {
         $('.js-parallax').enllax();
     }
 });
