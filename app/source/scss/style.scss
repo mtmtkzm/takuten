@@ -458,6 +458,9 @@ $sidebar: 330px;
 
 #nav-sp {
 	display: none;
+	@include media(pc) {
+		display: none !important;
+	}
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -465,7 +468,7 @@ $sidebar: 330px;
 	height: 50px;
 	background: #fff;
 	box-shadow: 0 0 5px rgba(0,0,0,0.15);
-	z-index: 3;
+	z-index: 10;
 	h1 {
 		position: absolute;
 		left: 0;
@@ -488,15 +491,48 @@ $sidebar: 330px;
 			padding: 13px 0 0 2px;
 		}
 	}
-	.gnav-sp {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 0;
-		width: 100vw;
-		height: 100vh;
-		background-color: rgba(100,100,100,.5);
-		display: none;
+}
+.gnav-sp {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(100,100,100,.75);
+	padding-top: 50px;
+	display: none;
+	.gnav-sp-menu {
+		li {
+			box-sizing: border-box;
+			float: left;
+			width: 25%;
+			height: 25vw;
+			background-color: $blue;
+			border: 0.5px solid #1b1966;
+			text-align: center;
+			letter-spacing: 0.3em;
+			line-height: 1.8em;
+			span {
+				display: inline-block;
+				margin-top: 12px;
+			}
+		}
+		a {
+			font-size: 15px;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+	.gnav-sp-intro {
+		width: 100%;
+		li {
+			box-sizing: border-box;
+			float: left;
+			width: 25%;
+			background-color: #fff;
+			border: 0.5px solid #eee;
+		}
 	}
 }
 
@@ -515,9 +551,24 @@ $sidebar: 330px;
 					max-width: 70px;
 				}
 			}
-			margin: 60px 0 80px 0;
+			margin: 40px 0;
 			&:hover {
 				cursor: pointer;
+			}
+		}
+	}
+	.link {
+		margin-bottom: 40px;
+		p img {
+			width: 140px;
+			height: auto;
+			margin-bottom: 10px;
+		}
+		a {
+			cursor: pointer;
+			img {
+				width: 200px;
+				height: auto;
 			}
 		}
 	}
