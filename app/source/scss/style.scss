@@ -219,6 +219,9 @@ body {
 			&.dots {
 				width: 100%;
 				animation: rotation 50s linear infinite;
+				@include media(sp) {
+					animation: none;
+				}
 			}
 			@keyframes rotation {
 				from {
