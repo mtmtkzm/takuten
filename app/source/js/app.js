@@ -65,9 +65,10 @@ function titleReady() {
 
 $(window).on('load', function() {
     titleReady();
+    mvTitle.css('width', $(window).width()*0.37);
 });
 $(window).on('resize', function() {
-    console.log(mvTitle.width());
+    mvTitle.css('width', $(window).width()*0.37);
 });
 
 
@@ -136,7 +137,7 @@ $(window).on('scroll load', function() {
     var scrollTop = $(window).scrollTop();
     scrollFadein.each(function(i, elm) {
         var targetPos = $(this).offset().top;
-        if (scrollTop > targetPos - $(window).height() + 200) {
+        if (scrollTop > targetPos - $(window).height() + 300) {
             $(this).animate({ opacity: 1 }, 500);
         }
     });
