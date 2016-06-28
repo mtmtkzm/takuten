@@ -245,6 +245,11 @@ $('.trigger').on('click', function() {
     }
 });
 
+$('.gnav-sp-item').on('click', function() {
+    $('.gnav-sp').fadeOut();
+    $(this).removeClass('open');
+});
+
 /*  Change menu Progress
  ************************* */
 var $jsDots = $('.js-progress-dots circle');
