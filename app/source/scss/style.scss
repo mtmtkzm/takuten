@@ -523,3 +523,14 @@ $sidebar: 330px;
 		font-size: 12px;
 	}
 }
+
+
+.circle-wrapper {
+	position: absolute;
+	z-index: 100000;
+	width: 36.955vw;
+	height: 36.955vw;
+	circle {
+		fill: red;
+	}
+}

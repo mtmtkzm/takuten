@@ -1,6 +1,6 @@
 /*  randomFade
  ************************* */
-function symbolFadeIn () {
+function symbolFadeIn() {
     var $f_target = $('.js-randomFade'); // FadeInさせる要素
     var $o_target = $('.js-randomOrder'); // FadeInさせる要素
 
@@ -45,7 +45,7 @@ var mvTitle = $('.js-title');
 var defaultWidth = mvTitle.width();
 
 function titleAnimate() {
-    mvTitle.css('width', defaultWidth*0.1);
+    mvTitle.css('width', defaultWidth * 0.1);
     mvTitle.animate({
         width: defaultWidth * 1.03,
         opacity: 1
@@ -65,11 +65,82 @@ function titleReady() {
 
 $(window).on('load', function() {
     titleReady();
-    mvTitle.css('width', $(window).width()*0.37);
+    mvTitle.css('width', $(window).width() * 0.37);
 });
 $(window).on('resize', function() {
-    mvTitle.css('width', $(window).width()*0.37);
+    mvTitle.css('width', $(window).width() * 0.37);
 });
+
+
+// function dotAnimation() {
+//     // Convert rad
+//     function rad(deg) {
+//         return deg * (Math.PI / 180);
+//     }
+//     // Delete under priod
+//     function floatFormat(number, n) {
+//         var _pow = Math.pow(10, n);
+//         return Math.round(number * _pow) / _pow;
+//     }
+
+
+//     var whole_r = $(window).width() * 0.37 / 2; // 円全体の半径
+//     var dot_r = 5; // 各円（dot）の半径
+
+//     function arrangeDot() {
+//         var coor = { x: [], y: [] };
+//         for (var i = 0; i < 72; i++) {
+//             var originCX = Math.sin(rad(5 * i)) * whole_r;
+//             var originCY = Math.cos(rad(5 * i)) * whole_r;
+//             var cx = floatFormat(originCX, 3);
+//             var cy = floatFormat(originCY, 3);
+//             coor.x[i] = cx + whole_r + dot_r;
+//             coor.y[i] = cy + whole_r + dot_r;
+//         }
+
+//         $('.circle').each(function(i) {
+//             $(this).css({
+//                 cx: coor.x[i],
+//                 cy: coor.y[i],
+//                 r: dot_r
+//             });
+//         });
+//     }
+
+//     function randomDot(i, elm, ranX, ranY) {
+//         setTimeout(function() {
+//             $(elm).attr({
+//                 cx: ranX,
+//                 cy: ranY,
+//                 r: 5
+//             });
+//             $(elm).animate({
+//                 opacity: 1
+//             })
+//             if (i > 70) {
+//                 setTimeout(function() {
+//                     arrangeDot();
+//                 }, 2000)
+//             }
+//         }, i * 50);
+//     }
+
+//     function orderFade(i, elm) {
+//         setTimeout(function() {
+//             $(elm).animate({
+//                 opacity: 1
+//             });
+//         }, i * 11);
+//     }
+
+//     arrangeDot();
+//     $('.circle').each(function(i, elm) {
+//         orderFade(i, elm);
+//     });
+// }
+
+
+
 
 
 
@@ -124,7 +195,7 @@ attachHref();
  ************************* */
 $(window).on('load resize', function() {
     var ww = $(window).width();
-    if(ww > 768) {
+    if (ww > 768) {
         $('.js-parallax').enllax();
     }
 });
@@ -157,8 +228,7 @@ $(window).on('scroll load', function() {
         $jsNav.addClass('static');
         $jsNav.removeClass('fixed');
     }
-
-    if(st > $('#main').offset().top) {
+    if (st > $('#main').offset().top) {
         $('#nav-sp').fadeIn();
     } else {
         $('#nav-sp').fadeOut();
@@ -166,7 +236,7 @@ $(window).on('scroll load', function() {
 });
 
 $('.trigger').on('click', function() {
-    if($(this).hasClass('open')) {
+    if ($(this).hasClass('open')) {
         $('.gnav-sp').fadeOut();
         $(this).removeClass('open');
     } else {
