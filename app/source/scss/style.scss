@@ -222,19 +222,10 @@ body {
 			left: 50%;
 			transform-origin: center center;
 			transform: rotate(0deg) translate(-50%, -50%);
-			// animation: rotation 50s linear infinite;
 			@include media(tb) {
 				animation: none;
 			}
 		}
-		// @keyframes rotation {
-		// 	from {
-		// 		transform: rotate(0deg) translate(-50%, -50%);
-		// 	}
-		// 	to {
-		// 		transform: rotate(360deg) translate(-50%, -50%);
-		// 	}
-		// }
 		@include media(tb) {
 			$area: 51vw;
 			width: $area;
@@ -520,8 +511,8 @@ $sidebar: 330px;
 		li {
 			box-sizing: border-box;
 			float: left;
-			width: 25%;
-			height: 25vw;
+			width: 50%;
+			height: 16vw;
 			background-color: $blue;
 			border: 0.5px solid #1b1966;
 			text-align: center;
@@ -529,7 +520,7 @@ $sidebar: 330px;
 			line-height: 1.8em;
 			span {
 				display: inline-block;
-				margin-top: 6vw;
+				line-height: 16vw;
 				vertical-align: middle;
 			}
 		}
