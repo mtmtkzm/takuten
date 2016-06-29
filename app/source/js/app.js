@@ -280,23 +280,24 @@ $(window).on('scroll load', function() {
 function initialize() {
     var LatLng = new google.maps.LatLng(35.181691, 136.947799);
     var MY_MAPTYPE_ID = '卓展2016 会場';
-    var featureOptions = [{
-        'stylers': [{
-            'hue': '#EFF2F5'
-        }],
-        'elementType': 'all',
-        'featureType': 'all'
-    }];
     var mapOptions = {
         zoom: 15,
         center: LatLng,
-        mapTypeControlOptions: {
-            mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-        },
         scrollwheel: false, // スクロールの制限
         mapTypeId: MY_MAPTYPE_ID
     };
+    var styledMapOptions = {
+        name: '卓展2016 会場'
+    };
+    var featureOptions = [{
+        // 'stylers': [{
+        //     'hue': '#EFF2F5'
+        // }],
+        // 'elementType': 'all',
+        // 'featureType': 'all'
+    }];
     var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
     var image = {
         url: './images/access/gm_icon.png',
         scaledSize: new google.maps.Size(56, 64)
@@ -306,13 +307,11 @@ function initialize() {
         position: LatLng,
         map: map
     });
-    var styledMapOptions = {
-        name: '卓展2016 会場'
-    };
     var customMapType = new google.maps.StyledMapType(featureOptions, styledMapOptions);
     map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+
 }
-setTimeout(initialize(), 250);
+initialize();
 
 /*  Smooth Scroll
  ************************* */
