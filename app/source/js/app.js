@@ -323,3 +323,22 @@ $('a[href^="#"]').on('click', function() {
     $('body, html').animate({ scrollTop: position - offsetY }, speed, 'swing');
     return false;
 });
+
+
+/* かいてん */
+var rotateCount = 0;
+function animationDeg () {
+    console.log('deg');
+    $({ deg: 0 }).animate({ deg: 360 }, {
+        duration: 50000,
+        progress: function() {
+            $('.dots').css({
+                transform: 'translate(-50%, -50%) rotate(' + this.deg + 'deg)'
+            });
+        },
+        complete: function() {
+            animationDeg();
+        }
+    });    
+}
+animationDeg();

@@ -220,21 +220,21 @@ body {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform-origin: 0% 0%;
-			transform: translate(-50%, -50%);
-			animation: rotation 50s linear infinite;
+			transform-origin: center center;
+			transform: rotate(0deg) translate(-50%, -50%);
+			// animation: rotation 50s linear infinite;
 			@include media(tb) {
 				animation: none;
 			}
 		}
-		@keyframes rotation {
-			from {
-				transform: rotate(0deg) translate(-50%, -50%);
-			}
-			to {
-				transform: rotate(360deg) translate(-50%, -50%);
-			}
-		}
+		// @keyframes rotation {
+		// 	from {
+		// 		transform: rotate(0deg) translate(-50%, -50%);
+		// 	}
+		// 	to {
+		// 		transform: rotate(360deg) translate(-50%, -50%);
+		// 	}
+		// }
 		@include media(tb) {
 			$area: 51vw;
 			width: $area;
