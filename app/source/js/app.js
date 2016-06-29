@@ -290,11 +290,11 @@ function initialize() {
         name: '卓展2016 会場'
     };
     var featureOptions = [{
-        // 'stylers': [{
-        //     'hue': '#EFF2F5'
-        // }],
-        // 'elementType': 'all',
-        // 'featureType': 'all'
+        'stylers': [{
+            'hue': '#EFF2F5'
+        }],
+        'elementType': 'all',
+        'featureType': 'all'
     }];
     var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
@@ -309,9 +309,7 @@ function initialize() {
     });
     var customMapType = new google.maps.StyledMapType(featureOptions, styledMapOptions);
     map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-
 }
-initialize();
 
 /*  Smooth Scroll
  ************************* */
