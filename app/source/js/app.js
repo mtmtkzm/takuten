@@ -82,7 +82,6 @@ function dotAnimation() {
         return Math.round(number * _pow) / _pow;
     }
 
-
     var whole_r = $(window).width() * 0.36 / 2; // 円全体の半径
     var dot_r = 5; // 各円（dot）の半径
 
@@ -137,7 +136,7 @@ function dotAnimation() {
         orderFade(i, elm);
     });
 }
-dotAnimation();
+// dotAnimation();
 
 
 
