@@ -310,6 +310,7 @@ function initialize() {
     var customMapType = new google.maps.StyledMapType(featureOptions, styledMapOptions);
     map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 }
+initialize();
 
 /*  Smooth Scroll
  ************************* */
