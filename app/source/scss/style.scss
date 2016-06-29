@@ -207,26 +207,33 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		opacity: 0;
-		img {
+		.takuten {
+			width: 92.6%;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform-origin: 0% 0%;
 			transform: translate(-50%, -50%);
-			&.takuten {
-				width: 92.6%;
+		}
+		.dots {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% -50%);
+			transform-origin: 0% 0%;
+			animation: rotation 50s linear infinite;
+			.circle {
+				fill: #fff;
 			}
-			&.dots {
-				width: 100%;
-				animation: rotation 50s linear infinite;
+		}
+		@keyframes rotation {
+			from {
+				transform: rotate(0deg) translate(-50%, -50%);
 			}
-			@keyframes rotation {
-				from {
-					transform: rotate(0deg) translate(-50%, -50%);
-				}
-				to {
-					transform: rotate(360deg) translate(-50%, -50%);
-				}
+			to {
+				transform: rotate(360deg) translate(-50%, -50%);
 			}
 		}
 		@include media(tb) {
@@ -435,6 +442,17 @@ $sidebar: 330px;
 			width: 90px;
 			margin: 28px 0;
 			text-align: center;
+			&.social {
+				a img {
+					padding: 5px;
+					max-width: 30px;
+					max-height: 30px;
+					transition: opacity .2s ease;
+					&:hover {
+						opacity: .85;
+					}
+				}
+			}
 		}
 		a {
 			padding-bottom: 2px;
@@ -572,5 +590,16 @@ $sidebar: 330px;
 	.copyright {
 		color: #fff;
 		font-size: 12px;
+	}
+}
+
+
+.circle-wrapper {
+	position: absolute;
+	z-index: 100000;
+	width: 36.955vw;
+	height: 36.955vw;
+	circle {
+		fill: red;
 	}
 }
